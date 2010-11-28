@@ -11,8 +11,8 @@
     = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
     
   %body
-    #title_header
-      = link_to enki_config[:title], root_url, :id => "blog_title"
+    / #title_header
+    /   = link_to enki_config[:title], root_url, :id => "blog_title"
     #navigation
       %menu
         - page_links_for_navigation.each do |link|
@@ -24,7 +24,10 @@
     #master
       #wrapper
         #main
-          #content
-            =yield
+          #content=yield
+          #side
+            = link_to enki_config[:title], root_url, :id => "blog_title"
+            This is the blog description and this will be replaced with a site configuration, just like all the other
+            enki_config stuff. So this should be marked as a TODO
           .push
     #footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
