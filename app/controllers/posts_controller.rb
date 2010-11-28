@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_filter :authenticate_user!
+  
   def index
     @tag = params[:tag]
     @posts = Post.find_recent(:tag => @tag, :include => :tags)

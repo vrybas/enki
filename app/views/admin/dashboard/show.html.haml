@@ -6,7 +6,7 @@
 #summary
   %h1= link_to enki_config[:title], root_url
   %p.stats
-    = "{pluralize @stats.post_count, 'post'}, {pluralize @stats.comment_count, 'comment'} {pluralize @stats.tag_count, 'tag'}"
+    = "#{pluralize @stats.post_count, 'post'}, #{pluralize @stats.comment_count, 'comment'} #{pluralize @stats.tag_count, 'tag'}"
     
 #recent-posts.panel
   %h2= t('.latest_posts')
