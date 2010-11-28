@@ -8,4 +8,22 @@ class User < ActiveRecord::Base
   
   validates :firstname, :lastname, :username, :presence => true
   validates :username, :uniqueness => true
+  
+  def name
+    [firstname, lastname].join(" ")
+  end
+  
+  class << self
+    def current
+      @current_user
+    end
+    
+    def current=(user)
+      @current_user = user
+    end
+    
+    def current?
+      @current_user.present
+    end
+  end
 end
