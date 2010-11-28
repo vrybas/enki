@@ -5,6 +5,7 @@
     %title=yield(:page_title) || enki_config[:title]
     = stylesheet_link_tag :all
     = javascript_include_tag 'jquery'
+    = javascript_include_tag 'highlight'
     = # TODO Remove this?
     = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
     
