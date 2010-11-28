@@ -7,6 +7,18 @@ en:
         save: Save
       show:
         editing_comment_by: "Editing comment by #{commenter}"
+    posts:
+      post:
+        delete: Delete Comment
+      show:
+        title: "Editing post - %{link_to_show} by %{author}"
+      form:
+        save: Save
+        comma_separated: "Comma separated: ruby, rails"
+        published_at: Published at
+        published_at_hint: "Example: now, yesterday, 1 hour from now"
+        slug_hint: Leave blank for an auto-generated slug based on the title.
+        minor_edit_hint: Minor edits will not show up as refreshed in feed readers. Use this to fix spelling mistakes and the like.
     dashboard:
       show:
         latest_posts: Latest Posts

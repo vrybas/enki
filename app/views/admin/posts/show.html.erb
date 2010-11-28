@@ -1,6 +1,0 @@
-<h1>Editing post - <%= link_to(@post.title, post_path(@post)) %></h1>
-
-<%= simple_form_for([:admin, @post]) do |form| -%>
-  <%= render :partial => 'form', :locals => {:form => form} %>
-  <%= form.submit("Save") -%>
-<% end -%>

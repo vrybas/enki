@@ -1,0 +1,12 @@
+- content_for :head do
+  = javascript_include_tag 'admin/edit-preview'
+
+
+= simple_form_for [:admin, @post] do |f|
+  = f.input :title
+  = f.input :body
+  = f.input :tag_list, :as => :string, :hint => t(".comma_separated")
+  = f.input :published_at_natural, :label => t('.published_at'), :as => :string, :hint => t(".published_at_hint")
+  = f.input :slug, :hint => t(".slug_hint")
+  = f.input :minor_edit, :as => :boolean, :hint => t('.minor_edit_hint') unless @post.new_record?
+  = f.submit t('.save')
