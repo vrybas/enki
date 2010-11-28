@@ -11,5 +11,7 @@ en:
       show:
         latest_posts: Latest Posts
         latest_comments: Latest Comments
-        
+    health:
+      title: Health
+      throw_exception: Throw exception
       
