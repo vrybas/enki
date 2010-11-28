@@ -1,0 +1,27 @@
+- content_for :head do
+  = javascript_include_tag 'common'
+  = javascript_include_tag 'live-comment-preview'
+- content_for :page_title do
+  = post_title(@post)
+
+= render @post
+
+%ol.commentlist
+  - @post.approved_comments.each do |comment|
+    %li{:id => "comment-#{comment.id}"}= render comment
+.related= raw t('.more_related', :related_link => link_to(t('.archives'), archives_path))
+
+%h2= t('.post_comment')
+- unless @comment.errors.empty?
+  .errors
+    %h3= t('.comment_not_added')
+    %ul
+      - @comment.errors.sort_by(&:first).each do |error|
+        %li= format_comment_error(error)
+= form_for [@post, @comment] do |f|
+  %div
+    %p
+      = f.text_field :author
+      = f.label :comment_author 
+    %p= f.text_area :body
+    %p= f.submit t('.save')

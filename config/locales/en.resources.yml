@@ -14,4 +14,18 @@ en:
     health:
       title: Health
       throw_exception: Throw exception
+  posts:
+    post:
+      posted_on: "Posted on %{date}"
+      tagged_with: "Tagged %{tag_list}"
+    index:
+      no_posts: There are no posts yet.
+      more_related: "Looking for more? Head over to the %{related_link}"
+      archives: Archives
+    show:
+      more_related: "Looking for more? Head over to the %{related_link}"
+      archives: Archives
+      post_comment: Post a comment
+      comment_not_added: Comment not added!
+      save: Add Comment
       
