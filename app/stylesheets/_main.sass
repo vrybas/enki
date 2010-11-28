@@ -1,0 +1,60 @@
+*
+  margin: 0
+
+html, body
+  height: 100%
+  margin: 0
+  padding: 0
+  background-color: #FFF
+  font-family: Arial, Helvetica, Verdana, sans-serif
+  a
+    color: #000
+#master
+  min-height: 100%
+  height: auto !important
+  height: 100%
+  margin-bottom: -219px /* the bottom margin is the negative value of the footer's height */
+
+#header
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 9999
+  #header-wrapper
+    display: none
+    margin: 0 auto
+    width: 500px
+    font-size: 10pt
+  #top
+    -webkit-box-shadow: 1px 1px 5px #000
+    min-height: 5px
+    background-color: $green
+  a.header-button
+    position: relative
+    @include rounded-bottom(12px)
+    height: 30px
+    line-height: 30px
+    display: block
+    width: 190px
+    margin: 0 auto
+    text-decoration: none
+    font-weight: bold
+    text-align: center
+    font-size: 12pt
+    background: $green
+    -webkit-box-shadow: 1px 1px 5px #000
+    z-index: -1
+#wrapper
+  margin: 10px auto
+  width: 75%
+  #main
+    a#blog_title
+      text-decoration: none
+      display: block
+      margin-top: 20px
+      text-align: center
+      font-size: 18pt
+#flash_notice
+  padding: 10px
+  text-align: center
+  font-size: 15pt

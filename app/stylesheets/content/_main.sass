@@ -1,0 +1,148 @@
+#wrapper
+  #main
+    #content
+      overflow: hidden
+      margin-top: 20px
+      strong
+        color: $green
+      h3
+        font-size: 18pt
+        font-weight: normal
+        text-align: center
+        text-shadow: 1px 1px 1px #CCC
+        margin: 10px
+        &.the-way
+          margin-top: 24px
+      .box
+        @include rounded(10px)
+        background-color: #F5F5F5
+        padding: 10px
+        overflow: hidden
+        margin: 0 0 40px 0
+      .small
+        width: 30%
+        float: left
+      .medium
+        width: 45%
+        float: left
+        &:last-child
+          float: right
+      .large
+      
+      .project
+        margin-right: 54px
+        position: relative
+        width: 280px
+        padding: 0
+        &:last-child
+          margin: 0
+        .wrap
+          overflow: hidden
+          padding: 10px
+          border-bottom: 1px dotted #555
+          &:last-child
+            border: none
+          .header
+            float: left
+        img
+          @include rounded-top(10px)
+        img.overlay
+          top: 0
+          left: 0
+          position: absolute
+          display: none
+        ul.links
+          margin: 0
+          padding: 0
+          float: right
+      ul.info-containers
+        margin: 0
+        padding: 20px
+        list-style: none
+        float: left
+        width: 100%
+        margin-right: 10px
+        color: #555
+        li
+          font-size: 16px
+          font-weight: normal
+          width: 210px
+          margin-left: 10px
+          float: left
+          line-height: 1.7
+          text-shadow: 1px 1px 0 rgba(255,255,255,1)
+          img
+            float: left
+            margin: 0 5px 3px 0
+      .name
+        font-weight: bold
+        text-shadow: 1px 1px 0 #fff
+      form
+        overflow: hidden
+        div.buttons
+          float: right
+        line-height: 40px
+        font-size: 13px
+        margin: 0 auto
+        width: 65%
+        input, select, textarea
+          outline: none
+        input, textarea
+          font-size: 16px
+        input[type="text"]
+          border: none
+          border-bottom: 1px dotted #555
+        textarea
+          width: 100%
+          height: 180px
+          padding:  4px
+          margin-top: 10px
+          border:  1px solid #CCC
+        input[type="submit"]
+          cursor: pointer
+          border: none
+          background: url(/images/button.png) no-repeat 0px
+          width: 158px
+          height: 29px
+          color: #FFF
+          text-shadow: 1px 1px 1px #ccc
+          &:hover
+            background:  url(/images/button.png) no-repeat -158px
+.container
+  display: block
+  overflow: hidden
+
+ul.links
+  margin: 20px 0 0 0
+  padding: 0 !important
+  list-style: none
+  li
+    width: 20px !important
+    height: 20px !important
+    float: left !important
+    background: url(/images/buttons/small/base.png) no-repeat 0px
+    margin-right: 5px
+    padding: 0 !important
+    &:last-child
+      margin: 0
+    &:hover
+      background: url(/images/buttons/small/base.png) no-repeat -20px
+      // TODO Update to use one icon per a.* the base is now includeded on the li tag rather than a.*
+    a
+      display: block
+      width: 20px !important
+      height: 20px !important
+      text-indent: -9999em
+      font-docoration: none
+    a.link
+      background: url(/images/buttons/small/link.png) no-repeat center
+    // TODO Update these to only include the icon and NOT the button texture. Parent <li> takes care of that
+    // Use a.link as REF
+    a.twitter
+      background: url(/images/twitter-icon.png) no-repeat 0px
+      &:hover
+        background: url(/images/twitter-icon.png) no-repeat -20px
+    a.github
+      background: url(/images/github-icon.png) no-repeat 0px
+      &:hover
+        background: url(/images/github-icon.png) no-repeat -20px
