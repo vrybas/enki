@@ -14,6 +14,8 @@ module NavigationHelpers
       '/admin'
     when /the admin login page/
       '/users/sign_in'
+    when '/admin/posts/new'
+      '/admin/posts/new'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
