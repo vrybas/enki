@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     end
     
     def current?
-      @current_user.present
+      @current_user.present?
     end
   end
 end

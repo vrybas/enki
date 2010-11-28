@@ -1,4 +1,12 @@
 en:
+  shared:
+    admin_menu:
+      dashboard: Dashboard
+      actions: Actions
+      health: Health
+      logout: Logout
+      back_to_blog: Back to blog
+      back_to_blog_title: View blog
   admin:
     comments:
       comment:
