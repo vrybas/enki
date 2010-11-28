@@ -10,7 +10,7 @@ Feature: Undo
       | Accidental Delete |
     When I go to /admin
     And I follow "Comments"
-    And I press "Delete Comment"
+    And I follow "Delete Comment"
     And I follow "Actions"
     And I press "Undo"
     Then a comment exists with attributes:

@@ -1,0 +1,8 @@
+%tr#comment{:class => cycle('', 'alt')}
+  %td.created_at= l comment.created_at, :format => :short
+  %td.author= link_to comment.author, admin_comment_path(comment)
+  %td= truncate comment.body, :length => 40
+  %td= link_to comment.post_title, admin_post_path(comment.post)
+  %td
+    = link_to image_tag('silk/pencil.png'), admin_comment_path(comment), :alt => "Edit"
+    = link_to t('.delete'), admin_comment_path(comment), :method => :delete, :class => :destroy
