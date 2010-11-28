@@ -1,0 +1,19 @@
+- content_for :head do
+  = javascript_include_tag 'jquery.form.js'
+  = javascript_include_tag 'admin/comments.js'
+  
+%h1= Comment.model_name.human
+%table
+  %tr
+    %th= Comment.human_attribute_name :created_at
+    %th= Comment.human_attribute_name :commenter
+    %th= Comment.human_attribute_name :post
+    %th= Comment.human_attribute_name :actions
+  - if @comments.empty?
+    %tr
+      %td= t('.no_comments')
+  - else
+    = render @comments
+  %tfoot
+    %tr
+      %td= will_paginate @comments
