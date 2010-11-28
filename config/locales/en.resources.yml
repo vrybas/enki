@@ -3,4 +3,8 @@ en:
     comments:
       comment:
         delete: Delete Comment
+      form:
+        save: Save
+      show:
+        editing_comment_by: "Editing comment by #{commenter}"
     
