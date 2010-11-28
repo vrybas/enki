@@ -5,6 +5,7 @@
     %title=yield(:page_title) || enki_config[:title]
     = stylesheet_link_tag :all
     = javascript_include_tag 'jquery'
+    = javascript_include_tag 'application'
     = javascript_include_tag 'highlight'
     = # TODO Remove this?
     = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
@@ -19,18 +20,18 @@
             %div(id="flash_#{name}")=msg
         =yield :header_button
         
-        #wrapper
-          #main
-            #navigation
+      #wrapper
+        #main
+          #navigation
+            %menu
+              - page_links_for_navigation.each do |link|
+                %li= link_to link.name, link.url
+            - unless category_links_for_navigation.empty?
               %menu
-                - page_links_for_navigation.each do |link|
+                - category_links_for_navigation.each do |link|
                   %li= link_to link.name, link.url
-              - unless category_links_for_navigation.empty?
-                %menu
-                  - category_links_for_navigation.each do |link|
-                    %li= link_to link.name, link.url
-                    
-            = link_to enki_config[:title], root_url, :id => "blog_title"
-            #content
-              =yield
-            .push
+          = link_to enki_config[:title], root_url, :id => "blog_title"
+          #content
+            =yield
+          .push
+    .footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
