@@ -12,6 +12,4 @@ Feature: Tag edit
     And I follow "Edit"
     And I fill in "Name" with "awesome"
     And I press "Save"
-    # Not sure why this doesn't redirect automatically
-    And I follow "redirected"
     Then I should see "awesome"

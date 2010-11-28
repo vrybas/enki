@@ -19,7 +19,7 @@ gem 'will_paginate', '~> 3.0.pre3'
 
 group :development, :test do
   gem 'cucumber-rails'
-  gem 'webrat'
+  gem 'capybara'
   gem 'factory_girl'
   gem 'rspec'
   gem 'rspec-rails'

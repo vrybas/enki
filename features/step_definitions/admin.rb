@@ -1,5 +1,8 @@
 Given /I am logged in/ do
-  post '/admin/session', :bypass_login => '1'
+  #post '/admin/session', :bypass_login => '1'
+  Given %(I am on the admin login page)
+  When %(I check "Bypass credentials check")
+  When %(I press "Login with OpenID")
 end
 
 Then /a RuntimeError is thrown when I press "(.*)"/ do |button|
