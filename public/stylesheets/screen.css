@@ -1,283 +1,169 @@
-html {
-  font-family: Arial, Helvetica, Verdana, sans-serif;
-  line-height: 1.7;
-  color: #343434;
-  background-color: white; }
+/*
+Syntax error: Inconsistent indentation: "  \t" was used for indentation, but the rest of the document was indented using 2 spaces.
+        on line 4 of app/stylesheets/_syntax.sass
+        from line 12 of app/stylesheets/screen.sass
 
-body {
-  -webkit-font-smoothing: antialiased; }
+1: @import "utils"
+2: 
+3: @import "typography"
+4: 
+5: $green: #afce41
+6: 
+7: @import "main"
+8: @import "menu"
+9: @import "content"
 
-@media only screen and (max-device-width: 480px) {
-  body {
-    -webkit-font-smoothing: antialiased; } }
-* {
-  margin: 0; }
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: Arial, Helvetica, Verdana, sans-serif; }
-  html a, body a {
-    color: black; }
-
-#master {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -219px; }
-
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999; }
-  #header #header-wrapper {
-    display: none;
-    margin: 0 auto;
-    width: 500px;
-    font-size: 10pt; }
-  #header #top {
-    -webkit-box-shadow: 1px 1px 5px black;
-    min-height: 5px;
-    background-color: #afce41; }
-  #header a.header-button {
-    position: relative;
-    -webkit-border-right-bottom-radius: 12px;
-    -moz-border-radius-bottomright: 12px;
-    border-bottom-right-radius: 12px;
-    -webkit-border-left-bottom-radius: 12px;
-    -moz-border-radius-bottomleft: 12px;
-    border-bottom-left-radius: 12px;
-    height: 30px;
-    line-height: 30px;
-    display: block;
-    width: 190px;
-    margin: 0 auto;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    font-size: 12pt;
-    background: #afce41;
-    -webkit-box-shadow: 1px 1px 5px black;
-    z-index: -1; }
-
-#wrapper {
-  margin: 10px auto;
-  width: 75%; }
-  #wrapper #main a#blog_title {
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18pt; }
-
-#flash_notice {
-  padding: 10px;
-  text-align: center;
-  font-size: 15pt; }
-
-#main #navigation menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden; }
-  #main #navigation menu li {
-    float: left;
-    margin: 0 5px; }
-    #main #navigation menu li:last-child {
-      margin-right: 0; }
-
-#wrapper #main #content {
-  overflow: hidden;
-  margin-top: 20px; }
-  #wrapper #main #content strong {
-    color: #afce41; }
-  #wrapper #main #content h3 {
-    font-size: 18pt;
-    font-weight: normal;
-    text-align: center;
-    text-shadow: 1px 1px 1px #cccccc;
-    margin: 10px; }
-    #wrapper #main #content h3.the-way {
-      margin-top: 24px; }
-  #wrapper #main #content .box {
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    padding: 10px;
-    overflow: hidden;
-    margin: 0 0 40px 0; }
-  #wrapper #main #content .small {
-    width: 30%;
-    float: left; }
-  #wrapper #main #content .medium {
-    width: 45%;
-    float: left; }
-    #wrapper #main #content .medium:last-child {
-      float: right; }
-  #wrapper #main #content .project {
-    margin-right: 54px;
-    position: relative;
-    width: 280px;
-    padding: 0; }
-    #wrapper #main #content .project:last-child {
-      margin: 0; }
-    #wrapper #main #content .project .wrap {
-      overflow: hidden;
-      padding: 10px;
-      border-bottom: 1px dotted #555555; }
-      #wrapper #main #content .project .wrap:last-child {
-        border: none; }
-      #wrapper #main #content .project .wrap .header {
-        float: left; }
-    #wrapper #main #content .project img {
-      -webkit-border-right-top-radius: 10px;
-      -moz-border-radius-topright: 10px;
-      border-top-right-radius: 10px;
-      -webkit-border-left-top-radius: 10px;
-      -moz-border-radius-topleft: 10px;
-      border-top-left-radius: 10px; }
-    #wrapper #main #content .project img.overlay {
-      top: 0;
-      left: 0;
-      position: absolute;
-      display: none; }
-    #wrapper #main #content .project ul.links {
-      margin: 0;
-      padding: 0;
-      float: right; }
-  #wrapper #main #content ul.info-containers {
-    margin: 0;
-    padding: 20px;
-    list-style: none;
-    float: left;
-    width: 100%;
-    margin-right: 10px;
-    color: #555555; }
-    #wrapper #main #content ul.info-containers li {
-      font-size: 16px;
-      font-weight: normal;
-      width: 210px;
-      margin-left: 10px;
-      float: left;
-      line-height: 1.7;
-      text-shadow: 1px 1px 0 white; }
-      #wrapper #main #content ul.info-containers li img {
-        float: left;
-        margin: 0 5px 3px 0; }
-  #wrapper #main #content .name {
-    font-weight: bold;
-    text-shadow: 1px 1px 0 white; }
-  #wrapper #main #content form {
-    overflow: hidden;
-    line-height: 40px;
-    font-size: 13px;
-    margin: 0 auto;
-    width: 65%; }
-    #wrapper #main #content form div.buttons {
-      float: right; }
-    #wrapper #main #content form input, #wrapper #main #content form select, #wrapper #main #content form textarea {
-      outline: none; }
-    #wrapper #main #content form input, #wrapper #main #content form textarea {
-      font-size: 16px; }
-    #wrapper #main #content form input[type="text"] {
-      border: none;
-      border-bottom: 1px dotted #555555; }
-    #wrapper #main #content form textarea {
-      width: 100%;
-      height: 180px;
-      padding: 4px;
-      margin-top: 10px;
-      border: 1px solid #cccccc; }
-    #wrapper #main #content form input[type="submit"] {
-      cursor: pointer;
-      border: none;
-      background: url(/images/button.png) no-repeat 0px;
-      width: 158px;
-      height: 29px;
-      color: white;
-      text-shadow: 1px 1px 1px #cccccc; }
-      #wrapper #main #content form input[type="submit"]:hover {
-        background: url(/images/button.png) no-repeat -158px; }
-
-.container {
-  display: block;
-  overflow: hidden; }
-
-ul.links {
-  margin: 20px 0 0 0;
-  padding: 0 !important;
-  list-style: none; }
-  ul.links li {
-    width: 20px !important;
-    height: 20px !important;
-    float: left !important;
-    background: url(/images/buttons/small/base.png) no-repeat 0px;
-    margin-right: 5px;
-    padding: 0 !important; }
-    ul.links li:last-child {
-      margin: 0; }
-    ul.links li:hover {
-      background: url(/images/buttons/small/base.png) no-repeat -20px; }
-    ul.links li a {
-      display: block;
-      width: 20px !important;
-      height: 20px !important;
-      text-indent: -9999em;
-      font-docoration: none; }
-    ul.links li a.link {
-      background: url(/images/buttons/small/link.png) no-repeat center; }
-    ul.links li a.twitter {
-      background: url(/images/twitter-icon.png) no-repeat 0px; }
-      ul.links li a.twitter:hover {
-        background: url(/images/twitter-icon.png) no-repeat -20px; }
-    ul.links li a.github {
-      background: url(/images/github-icon.png) no-repeat 0px; }
-      ul.links li a.github:hover {
-        background: url(/images/github-icon.png) no-repeat -20px; }
-
-.push {
-  height: 219px; }
-
-#footer {
-  min-height: 219px;
-  background: #2d2d2d url(/images/bg-footer.png) repeat-x;
-  padding: 30px;
-  font-size: 12px;
-  color: white; }
-  #footer a, #footer a:visited, #footer a:hover {
-    color: white;
-    text-decoration: none; }
-  #footer .col {
-    color: white;
-    border-right: 1px solid #555555;
-    overflow: hidden;
-    min-height: 210px;
-    width: 29%;
-    float: left;
-    margin-left: 20px;
-    padding-right: 20px; }
-    #footer .col:last-child {
-      margin-right: 0;
-      border-right: none; }
-    #footer .col ul {
-      margin: 0;
-      padding: 0;
-      list-style: none; }
-      #footer .col ul li {
-        float: none;
-        border: none;
-        overflow: hidden;
-        padding: 5px;
-        width: 100%;
-        border-bottom: 1px solid #555555; }
-        #footer .col ul li.powered-by {
-          text-align: right; }
-        #footer .col ul li:last-child {
-          border: none; }
-  #footer .twitter ul li img {
-    margin: 0 3px 3px 0;
-    float: left; }
+Backtrace:
+app/stylesheets/_syntax.sass:4
+app/stylesheets/screen.sass:12
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:370:in `block in tabulate'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:328:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:328:in `each_with_index'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:328:in `tabulate'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:299:in `_to_tree'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:250:in `block in to_tree'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/util.rb:339:in `silence_sass_warnings'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:250:in `to_tree'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/import_node.rb:84:in `perform!'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:330:in `_perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/import_node.rb:74:in `_perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:213:in `perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/root_node.rb:37:in `perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:351:in `block in perform_children'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:351:in `map'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:351:in `perform_children'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:342:in `perform!'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/root_node.rb:59:in `perform!'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:330:in `_perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/node.rb:213:in `perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/root_node.rb:37:in `perform'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/tree/root_node.rb:29:in `render'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:268:in `_render'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:240:in `block in render'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/util.rb:339:in `silence_sass_warnings'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/engine.rb:240:in `render'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:310:in `update_stylesheet'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:178:in `block (2 levels) in update_stylesheets'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:172:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:172:in `block in update_stylesheets'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:170:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/compiler.rb:170:in `update_stylesheets'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/sass-3.1.0.alpha.29/lib/sass/plugin/rack.rb:40:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/warden-0.10.7/lib/warden/manager.rb:35:in `block in call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/warden-0.10.7/lib/warden/manager.rb:34:in `catch'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/warden-0.10.7/lib/warden/manager.rb:34:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/urlmap.rb:47:in `block in call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/urlmap.rb:41:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.2.1/lib/rack/urlmap.rb:41:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-test-0.5.6/lib/rack/mock_session.rb:30:in `request'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-test-0.5.6/lib/rack/test.rb:209:in `process_request'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/rack-test-0.5.6/lib/rack/test.rb:66:in `post'
+/Users/stygeo/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/forwardable.rb:182:in `post'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/driver/rack_test_driver.rb:243:in `post'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/driver/rack_test_driver.rb:221:in `submit'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/driver/rack_test_driver.rb:153:in `submit'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/driver/rack_test_driver.rb:76:in `click'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/node.rb:144:in `click'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/node/actions.rb:37:in `click_button'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/session.rb:273:in `method_missing'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/capybara-0.4.0/lib/capybara/dsl.rb:93:in `click_button'
+/Users/stygeo/development/enki/features/step_definitions/web_steps.rb:29:in `block (2 levels) in <top (required)>'
+/Users/stygeo/development/enki/features/step_definitions/web_steps.rb:14:in `with_scope'
+/Users/stygeo/development/enki/features/step_definitions/web_steps.rb:28:in `block in <top (required)>'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:48:in `instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:48:in `block in cucumber_instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:69:in `cucumber_run_with_backtrace_filtering'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:36:in `cucumber_instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/rb_support/rb_step_definition.rb:62:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/step_match.rb:26:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:138:in `invoke'
+/Users/stygeo/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/forwardable.rb:182:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/rb_support/rb_world.rb:22:in `__cucumber_invoke'
+/Users/stygeo/development/enki/features/step_definitions/admin.rb:5:in `block in <top (required)>'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:48:in `instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:48:in `block in cucumber_instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:69:in `cucumber_run_with_backtrace_filtering'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/core_ext/instance_exec.rb:36:in `cucumber_instance_exec'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/rb_support/rb_step_definition.rb:62:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/step_match.rb:26:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/step_invocation.rb:63:in `invoke'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/step_invocation.rb:42:in `accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:99:in `block in visit_step'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:98:in `visit_step'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/step_collection.rb:15:in `block in accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/step_collection.rb:14:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/step_collection.rb:14:in `accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:93:in `block in visit_steps'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:92:in `visit_steps'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/scenario.rb:53:in `block (2 levels) in accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:79:in `block (2 levels) in with_hooks'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:95:in `before_and_after'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:78:in `block in with_hooks'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:115:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:115:in `block (3 levels) in around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/language_support/language_methods.rb:13:in `block in around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/language_support/language_methods.rb:95:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/language_support/language_methods.rb:95:in `execute_around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/language_support/language_methods.rb:12:in `around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:114:in `block (2 levels) in around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:112:in `call'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime/support_code.rb:112:in `around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:90:in `around'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:77:in `with_hooks'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/scenario.rb:51:in `block in accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/scenario.rb:106:in `with_visitor'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/scenario.rb:45:in `accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:51:in `block in visit_feature_element'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:50:in `visit_feature_element'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/feature.rb:35:in `block in accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/feature.rb:34:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/feature.rb:34:in `accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:20:in `block in visit_feature'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:19:in `visit_feature'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/features.rb:29:in `block in accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/features.rb:17:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/features.rb:17:in `each'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/features.rb:28:in `accept'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:14:in `block in visit_features'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:164:in `broadcast'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/ast/tree_walker.rb:13:in `visit_features'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/runtime.rb:45:in `run!'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/cli/main.rb:48:in `execute!'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/lib/cucumber/cli/main.rb:21:in `execute'
+/Users/stygeo/.rvm/gems/ruby-1.9.2-p0/gems/cucumber-0.9.4/bin/cucumber:8:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Inconsistent indentation: \"  \t\" was used for indentation, but the rest of the document was indented using 2 spaces.\A         on line 4 of app/stylesheets/_syntax.sass\A         from line 12 of app/stylesheets/screen.sass\A \A 1: @import \"utils\"\A 2: \A 3: @import \"typography\"\A 4: \A 5: $green: #afce41\A 6: \A 7: @import \"main\"\A 8: @import \"menu\"\A 9: @import \"content\""; }
