@@ -7,4 +7,9 @@ en:
         save: Save
       show:
         editing_comment_by: "Editing comment by #{commenter}"
-    
+    dashboard:
+      show:
+        latest_posts: Latest Posts
+        latest_comments: Latest Comments
+        
+      
