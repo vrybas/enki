@@ -1,8 +1,12 @@
-%h2= link_to post.title, post_path(post)
+%h2.post_header
+  = link_to post.title, post_path(post)
+  %span.author Test
+  %span.date= l(post.published_at, :format => :short)
+
 #entrybody= raw post.body_html
 .meta
   %ul
-    %li.date= t('.posted_on', :date => l(post.published_at, :format => :long))
+    %li
     %li.comments= link_to pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => "comments")
     - unless post.tags.empty?
       %li.tags= t('.tagged_with', :tag_list => linked_tag_list(post.tags))

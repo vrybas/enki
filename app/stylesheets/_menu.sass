@@ -1,13 +1,32 @@
-#main
-  #navigation
-    menu
-      margin: 0
-      padding: 0
-      list-style: none
-      overflow: hidden
-      li
-        float: left
-        margin: 0 5px
-        &:last-child
-          margin-right: 0
-    
+@import "utils"
+
+#navigation
+  background: $green
+  menu
+    margin: 0 auto
+    width: 800px
+    padding: 0
+    list-style: none
+    overflow: hidden
+    height: 50px
+    line-height: 50px
+    li
+      float: left
+      margin: 0 5px
+      &:last-child
+        margin-right: 0
+      a
+        padding: 8px
+        color: #FFF
+        font-family: Georgia, Garamond, 'Liberation Serif', serif
+        font-weight: bold
+        font-style: italic
+        font-size: 13pt
+        text-decoration: none
+        @include rounded(5px)
+        &:hover
+          background: #204052
+          
+          
+        
+  

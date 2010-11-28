@@ -1,8 +1,10 @@
 Given /I am logged in/ do
   #post '/admin/session', :bypass_login => '1'
+  Factory :user
   Given %(I am on the admin login page)
-  When %(I check "Bypass credentials check")
-  When %(I press "Login with OpenID")
+  When %(I fill in "Email" with "awesomepanda@agile-pandas.com")
+  When %(I fill in "Password" with "123456")
+  When %(I press "Sign in")
 end
 
 Then /a RuntimeError is thrown when I press "(.*)"/ do |button|

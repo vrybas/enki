@@ -2,8 +2,6 @@ Enki::Application.routes.draw do
   devise_for :users
 
   namespace 'admin' do
-    resource :session
-
     resources :posts, :pages do
       post 'preview', :on => :collection
     end

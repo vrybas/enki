@@ -4,7 +4,7 @@
 - content_for :page_title do
   = post_title(@post)
 
-= render @post
+.post= render @post
 
 %ol.commentlist
   - @post.approved_comments.each do |comment|

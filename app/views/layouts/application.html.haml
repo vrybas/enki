@@ -11,26 +11,19 @@
     = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
     
   %body
+    #title_header
+      = link_to enki_config[:title], root_url, :id => "blog_title"
+    #navigation
+      %menu
+        - page_links_for_navigation.each do |link|
+          %li= link_to link.name, link.url
+      - unless category_links_for_navigation.empty?
+        %menu
+          - category_links_for_navigation.each do |link|
+            %li= link_to link.name, link.url
     #master
-      #header
-        #top
-          #header-wrapper=yield :header_content
-          #notice
-          -flash.each do |name, msg|
-            %div(id="flash_#{name}")=msg
-        =yield :header_button
-        
       #wrapper
         #main
-          #navigation
-            %menu
-              - page_links_for_navigation.each do |link|
-                %li= link_to link.name, link.url
-            - unless category_links_for_navigation.empty?
-              %menu
-                - category_links_for_navigation.each do |link|
-                  %li= link_to link.name, link.url
-          = link_to enki_config[:title], root_url, :id => "blog_title"
           #content
             =yield
           .push
