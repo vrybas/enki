@@ -1,3 +1,9 @@
+h1. Important Note
+This version of the extended version of Enki is no where near useable in production. You could follow the instructions of
+the original steps of Enki but I can't guarantee it will actually work (a lot is currently Work In Progress). So while I hack
+away bear with me for a little while. Once I get around updating most of the code I'll write a new README and (hopefully)
+preserve as much as possible of the original README text. 
+
 h1. Enki
 
 A Ruby on Rails blogging app for the fashionable developer.
