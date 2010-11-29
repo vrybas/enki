@@ -5,6 +5,6 @@ describe User do
   
   it "should append first and lastname" do
     user.should respond_to(:name)
-    user.name.should eq "Miss Panda"
+    user.name.should eq "#{user.firstname} #{user.lastname}"
   end
 end

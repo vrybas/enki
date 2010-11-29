@@ -1,13 +1,13 @@
 %menu
   %li= link_to t('.dashboard'), admin_root_path, :accesskey => '1'
   %li 
-    = link_to Post.model_name.human, admin_posts_path, :accesskey => '2'
+    = link_to Post.model_name.human(:count => :other), admin_posts_path, :accesskey => '2'
     = link_to "(+)", new_admin_post_path, :accesskey => 'n'
   %li
     = link_to Page.model_name.human, admin_pages_path, :accesskey => '3'
     = link_to "(+)", new_admin_page_path, :accesskey => 'p'
-  %li= link_to Comment.model_name.human, admin_comments_path, :accesskey => '4'
-  %li= link_to Tag.model_name.human, admin_tags_path, :accesskey => '5'
+  %li= link_to Comment.model_name.human(:count => :other), admin_comments_path, :accesskey => '4'
+  %li= link_to Tag.model_name.human(:count => :other), admin_tags_path, :accesskey => '5'
   %li= link_to t('.actions'), admin_undo_items_path, :accesskey => '6'
   %li= link_to t('.health'), admin_health_path, :accesskey => '7'
   %li= link_to t('.logout'), destroy_user_session_path, :accesskey => 'l', :method => :delete

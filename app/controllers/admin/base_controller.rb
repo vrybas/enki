@@ -1,4 +1,5 @@
 class Admin::BaseController < ApplicationController
+  layout 'admin'
   protected
 
   def set_content_type

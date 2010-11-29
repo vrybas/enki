@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      post:
+        one: Post
+        other: Posts
+      tag:
+        one: Tag
+        other: Tags
+      comment:
+        one: Comment
+        other: Comments
