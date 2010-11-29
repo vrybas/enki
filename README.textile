@@ -4,6 +4,9 @@ the original steps of Enki but I can't guarantee it will actually work (a lot is
 away bear with me for a little while. Once I get around updating most of the code I'll write a new README and (hopefully)
 preserve as much as possible of the original README text. 
 
+PS. Sorry about the large text, I just want to make sure you read it before you clone this repo. and start using it and wonder
+why it ain't working and get angry with us :)
+
 h1. Enki
 
 A Ruby on Rails blogging app for the fashionable developer.
