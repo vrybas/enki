@@ -126,7 +126,7 @@ describe Admin::CommentsController do
 
     it("renders comment as json") do
       do_delete
-      response.should contain(/#{Regexp.escape(@comment.to_json)}/)
+      response.should match(Regexp.new(@comment.to_json))
     end
   end
 end

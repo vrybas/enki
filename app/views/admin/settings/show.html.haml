@@ -1,0 +1,10 @@
+%h1= Setting.model_name.human
+
+- if @setting.new_record?
+  #dialog= t('.no_settings_set')
+  
+= simple_form_for admin_settings_path do |f|
+  = f.input :title
+  = f.input :description
+  
+  = f.submit t('.save')

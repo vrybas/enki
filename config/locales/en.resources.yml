@@ -34,6 +34,14 @@ en:
     health:
       title: Health
       throw_exception: Throw exception
+    settings:
+      show: 
+        no_settings_set: "It appears you haven't got any settings set yet. Let's get that blog personalized!"
+        save: Save settings
+      create:
+        successful: Your settings have been saved
+      update:
+        successful: Your settings have been saved
   posts:
     post:
       posted_on: "Posted on %{date}"

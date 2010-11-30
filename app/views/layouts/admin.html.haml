@@ -11,8 +11,10 @@
     = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
     
   %body
-    / #title_header
-    /   = link_to enki_config[:title], root_url, :id => "blog_title"
+    #notice
+    -flash.each do |name, msg|
+      %div(id="flash_#{name}")=msg
+      
     - if User.current?
       #admin_navigation= render :partial => "shared/admin_menu"
     #master
