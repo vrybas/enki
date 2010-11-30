@@ -30,3 +30,8 @@ module DisableFlashSweeping
   def sweep
   end
 end
+
+def login_user
+  @user = Factory(:user)
+  sign_in @user
+end
