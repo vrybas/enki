@@ -1,6 +1,6 @@
 %h2.post_header
   = link_to post.title, post_path(post)
-  %span.author Test
+  %span.author= post.user.name
   %span.date= l(post.published_at, :format => :short)
 .meta
   %ul
