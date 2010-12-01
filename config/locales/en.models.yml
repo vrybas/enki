@@ -10,7 +10,9 @@ en:
       comment:
         one: Comment
         other: Comments
-      setting: Settings
+      setting:
+        one: Settings
+        other: Settings
     attributes:
       comment:
         title: Blog title

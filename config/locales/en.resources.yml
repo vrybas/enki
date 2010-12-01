@@ -38,6 +38,7 @@ en:
       show: 
         no_settings_set: "It appears you haven't got any settings set yet. Let's get that blog personalized!"
         save: Save settings
+        title: Blog Settings
       create:
         successful: Your settings have been saved
       update:
