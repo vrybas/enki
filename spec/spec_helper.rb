@@ -26,10 +26,10 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
 end
 
-module DisableFlashSweeping
-  def sweep
-  end
-end
+# module DisableFlashSweeping
+#   def sweep
+#   end
+# end
 
 def login_user
   @user = Factory(:user)

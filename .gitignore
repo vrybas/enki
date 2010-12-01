@@ -6,4 +6,3 @@ config/database.yml
 db/schema.rb
 .bundle
 *.log
-public/stylesheets/screen.css
