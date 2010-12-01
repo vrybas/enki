@@ -4,8 +4,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 describe Post, "integration" do
   describe 'setting tag_list' do
     it 'increments tag counter cache' do
-      post1 = Post.create!(:title => 'My Post', :body => "body", :tag_list => "ruby")
-      post2 = Post.create!(:title => 'My Post', :body => "body", :tag_list => "ruby")
+      post1 = Post.create!(:title => 'My Post', :markdown => "body", :tag_list => "ruby")
+      post2 = Post.create!(:title => 'My Post', :markdown => "body", :tag_list => "ruby")
       Tag.find_by_name('ruby').taggings_count.should == 2
       Post.last.destroy
       Tag.find_by_name('ruby').taggings_count.should == 1
@@ -181,7 +181,7 @@ describe Post, 'validations' do
     {
       :title                => "My Post",
       :slug                 => "my-post",
-      :body                 => "hello this is my post",
+      :markdown             => "hello this is my post",
       :published_at_natural => 'now'
     }
   end
@@ -195,7 +195,7 @@ describe Post, 'validations' do
   end
 
   it 'is invalid with no body' do
-    Post.new(valid_post_attributes.merge(:body => '')).should_not be_valid
+    Post.new(valid_post_attributes.merge(:markdown => '')).should_not be_valid
   end
 
   it 'is invalid with bogus published_at_natural' do
@@ -211,7 +211,7 @@ end
 
 describe Post, '.build_for_preview' do
   before(:each) do
-    @post = Post.build_for_preview(:title => 'My Post', :body => "body", :tag_list => "ruby")
+    @post = Post.build_for_preview(:title => 'My Post', :markdown => "body", :tag_list => "ruby")
   end
 
   it 'returns a new post' do
@@ -228,7 +228,7 @@ describe Post, '.build_for_preview' do
   end
 
   it 'applies filter to body' do
-    @post.body_html.should == '<p>body</p>'
+    @post.body.should == '<p>body</p>'
   end
 
   it 'generates tags from tag_list' do

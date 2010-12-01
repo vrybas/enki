@@ -52,7 +52,7 @@ describe Comment do
   it "asks post to update it's comment counter after save" do
     set_comment_attributes(@comment)
     @comment.blank_openid_fields
-    @comment.post.update_attributes(:title => 'My Post', :body => "body")
+    @comment.post.update_attributes(:title => 'My Post', :markdown => "body")
     @comment.post.save
     @comment.save
     @comment.post.approved_comments.count.should == 1
@@ -61,7 +61,7 @@ describe Comment do
   it "asks post to update it's comment counter after destroy" do
     set_comment_attributes(@comment)
     @comment.blank_openid_fields
-    @comment.post.update_attributes(:title => 'My Post', :body => "body")
+    @comment.post.update_attributes(:title => 'My Post', :markdown => "body")
     @comment.post.save
     @comment.save
     @comment.destroy
@@ -71,7 +71,7 @@ describe Comment do
   it "applies a Lesstile filter to body and store it in body_html before save" do
     set_comment_attributes(@comment)
     @comment.blank_openid_fields
-    @comment.post.update_attributes(:title => 'My Post', :body => "body")
+    @comment.post.update_attributes(:title => 'My Post', :markdown => "body")
     @comment.post.save
     @comment.save
     @comment.body_html.should_not be_nil

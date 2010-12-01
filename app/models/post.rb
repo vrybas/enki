@@ -13,10 +13,10 @@ class Post < ActiveRecord::Base
   before_save             :apply_filter, :set_author
 
 
-  validates_presence_of   :title, :slug, :body
+  validates_presence_of   :title, :slug, :markdown
 
   validate                :validate_published_at_natural
-
+  
   def validate_published_at_natural
     errors.add("published_at_natural", "Unable to parse time") unless published?
   end
@@ -102,7 +102,8 @@ class Post < ActiveRecord::Base
   end
 
   def apply_filter
-    self.body_html = EnkiFormatter.format_as_xhtml(self.body)
+    #self.body_html = EnkiFormatter.format_as_xhtml(self.body)
+    self.body = BlueCloth.new(self.markdown).to_html
   end
 
   def set_dates

@@ -6,18 +6,20 @@
   = javascript_include_tag 'elastic'
 
 #post-wrapper
-  %h2.title= @post.title
-  .post-preview
-    
+  .post
+    %h2.post_header
+      = link_to @post.title, "#"
+      %span.author= current_user.name
+      %span.date= l Date.today
     #wmd-preview
 
   = simple_form_for [:admin, @post], :html => {:id => "post-form"} do |f|
-    = f.text_field :title
-    #title-container= @post.title
+    = f.text_field :title, :placeholder => "Road to world domination!"
+    #title-container= @post.title || raw("&nbsp;")
     
     #wmd-container
       #wmd-button-bar
-      = f.text_area :body, :id => "wmd-input", :cols => "92", :rows => "15"
+      = f.text_area :markdown, :id => "wmd-input", :cols => "92", :rows => "15"
 	
     = f.submit t('.save')  
     = f.input :tag_list, :as => :string, :hint => t(".comma_separated")

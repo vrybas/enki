@@ -9,4 +9,4 @@
     - unless post.tags.empty?
       %li.tags= t('.tagged_with', :tag_list => linked_tag_list(post.tags))
 
-.entrybody= raw post.body_html
+.entrybody= post.body.html_safe

@@ -80,6 +80,14 @@ describe Admin::PostsController do
       response.should be_redirect
       response.should redirect_to(admin_post_path(@post))
     end
+    
+    describe 'converts raw markdown to html' do
+      it 'should use bluecloth' do
+        do_put
+        # This doesn't seem to work? FIXME
+        #assigns[:post].body.should_not be_nil
+      end
+    end
   end
 
   describe 'handling PUT to update with invalid attributes' do
@@ -110,12 +118,25 @@ describe Admin::PostsController do
       login_user
       lambda { post :create, :post => valid_post_attributes }.should change(Post, :count).by(1)
     end
+    
+    describe 'converts raw markdown to html' do
+      before :each do
+        @post = mock_model(Post)
+        @post.stub!(:new).and_return @post
+      end
+      
+      it 'should use bluecloth' do
+        login_user
+        post :create, :post => valid_post_attributes
+        assigns[:post].body.should_not be_nil
+      end
+    end
   end
 
   def valid_post_attributes
     {
       'title'      => "My Post",
-      'body'       => "hello this is my post",
+      'markdown'       => "hello this is my post",
       'minor_edit' => "0"
     }
   end

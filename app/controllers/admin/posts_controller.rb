@@ -14,6 +14,7 @@ class Admin::PostsController < Admin::BaseController
 
   def create
     @post = Post.new(params[:post])
+
     if @post.save
       respond_to do |format|
         format.html {
