@@ -2,7 +2,9 @@ Enki::Application.routes.draw do
   devise_for :users
 
   namespace 'admin' do
-    resource :settings
+    resources :settings do
+      root :to => "settings#show"
+    end
     
     resources :posts, :pages do
       post 'preview', :on => :collection
