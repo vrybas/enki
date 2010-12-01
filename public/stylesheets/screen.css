@@ -10,6 +10,9 @@ body {
 @media only screen and (max-device-width: 480px) {
   body {
     -webkit-font-smoothing: antialiased; } }
+kbd, code, tt {
+  font: normal 12px/16px "Monaco", "Courier New", Courier, monospace; }
+
 * {
   margin: 0; }
 
@@ -118,8 +121,6 @@ html, body {
     overflow: hidden;
     margin: 20px 50px 0 0;
     float: left; }
-    #wrapper #main #content.admin {
-      width: 900px !important; }
     #wrapper #main #content strong {
       color: #afce41; }
     #wrapper #main #content h3 {
@@ -267,28 +268,65 @@ ul.links {
       ul.links li a.github:hover {
         background: url(/images/github-icon.png) no-repeat -20px; }
 
-#main .post {
-  margin: 5px 0; }
+#main .post h2.post_header {
+  margin: 0;
+  padding: 0; }
   #main .post h2.post_header a {
     text-decoration: none;
     color: #333333; }
+    #main .post h2.post_header a:hover {
+      text-decoration: underline; }
   #main .post h2.post_header span.date {
     font-size: 12pt;
     color: #cccccc; }
   #main .post h2.post_header span.author {
     color: #afce41;
     font-size: 12pt; }
-#main .meta {
-  border-top: 1px dotted #999999;
-  margin-top: 3px; }
-  #main .meta ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden; }
-  #main .meta li {
+#main .meta ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+#main .meta li {
+  float: left;
+  margin-right: 5px; }
+#main .entrybody {
+  margin-top: 1em; }
+
+#wrapper.admin {
+  width: 90% !important;
+  margin-top: 40px; }
+#wrapper #post-wrapper {
+  overflow: hidden; }
+  #wrapper #post-wrapper .post-preview {
     float: left;
-    margin-right: 5px; }
+    width: 420px; }
+    #wrapper #post-wrapper .post-preview h2 {
+      color: red; }
+    #wrapper #post-wrapper .post-preview h2 {
+      margin: 0;
+      pandding: 0; }
+  #wrapper #post-wrapper #post-form {
+    width: 560px;
+    float: right;
+    margin-right: 20px; }
+  #wrapper #post-wrapper form input[type="text"] {
+    width: 100%;
+    border: 1px #999999 solid;
+    color: #666666;
+    font-size: 1.3em;
+    line-height: 15px; }
+  #wrapper #post-wrapper form input[type="submit"] {
+    font-size: 18px;
+    border: 0;
+    background-color: #333333;
+    color: white;
+    text-shadow: 0 1px 0 #222222;
+    font-weight: bold;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin: 0 0 15px 0; }
 
 .push {
   height: 80px; }
@@ -305,9 +343,15 @@ ul.links {
     text-decoration: none; }
 
 pre code {
+  font-family: Monaco, "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 1em 1.5em;
+  margin: 1em 0 1em 2em;
   display: block;
   background: #203042;
-  color: #f8f8f8; }
+  color: #f8f8f8;
+  white-space: pre-wrap; }
 pre .shebang, pre .comment, pre .template_comment, pre .javadoc {
   color: #7c7c7c; }
 pre .keyword, pre .tag, pre .ruby .function .keyword, pre .tex .command {

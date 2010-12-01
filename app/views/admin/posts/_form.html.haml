@@ -1,12 +1,25 @@
-- content_for :head do
+= content_for :head do
   = javascript_include_tag 'admin/edit-preview'
+  = javascript_include_tag "showdown"
+  = javascript_include_tag 'wmd'
+  = javascript_include_tag 'textarearesizer'
+  = javascript_include_tag 'elastic'
 
+#post-wrapper
+  %h2.title= @post.title
+  .post-preview
+    
+    #wmd-preview
 
-= simple_form_for [:admin, @post] do |f|
-  = f.input :title
-  = f.input :body
-  = f.input :tag_list, :as => :string, :hint => t(".comma_separated")
-  = f.input :published_at_natural, :label => t('.published_at'), :as => :string, :hint => t(".published_at_hint")
-  = f.input :slug, :hint => t(".slug_hint")
-  = f.input :minor_edit, :as => :boolean, :hint => t('.minor_edit_hint') unless @post.new_record?
-  = f.submit t('.save')
+  = simple_form_for [:admin, @post], :html => {:id => "post-form"} do |f|
+    = f.text_field :title
+    #title-container= @post.title
+    
+    #wmd-container
+      #wmd-button-bar
+      = f.text_area :body, :id => "wmd-input", :cols => "92", :rows => "15"
+	
+    = f.submit t('.save')  
+    = f.input :tag_list, :as => :string, :hint => t(".comma_separated")
+    = f.input :published_at_natural, :label => t('.published_at'), :as => :string, :hint => t(".published_at_hint")
+    = f.input :minor_edit, :as => :boolean, :hint => t('.minor_edit_hint') unless @post.new_record?

@@ -53,9 +53,9 @@ describe Admin::SettingsController do
   
   describe 'handling POST to create with valid attributes' do
     before :each do
-      @setting = Setting.new
+      @setting = Factory(:setting)
       @setting.stub!(:save).and_return true
-      Setting.stub!(:new).and_return @setting
+      Setting.stub!(:find_or_create).and_return @setting
       
       @attributes = {'title' => 'Some title', 'description' => 'Some description'}
     end
@@ -72,7 +72,7 @@ describe Admin::SettingsController do
     end
     
     it('updates the bolg settings') do
-      Setting.should_receive(:new).with(@attributes).and_return(@setting)
+      Setting.should_receive(:update_attributes).with(@attributes).and_return(@setting)
       do_post
     end
     

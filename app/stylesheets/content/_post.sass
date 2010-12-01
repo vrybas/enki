@@ -1,10 +1,13 @@
 #main
   .post
-    margin: 5px 0
     h2.post_header
+      margin: 0
+      padding: 0
       a
         text-decoration: none
         color: #333
+        &:hover
+          text-decoration: underline
       span.date
         font-size: 12pt
         color: #CCC
@@ -14,8 +17,6 @@
         
       
   .meta
-    border-top: 1px dotted #999
-    margin-top: 3px
     ul
       margin: 0
       padding: 0
@@ -24,3 +25,5 @@
     li
       float: left
       margin-right: 5px
+  .entrybody
+    margin-top: 1em

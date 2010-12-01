@@ -7,8 +7,7 @@
     = javascript_include_tag 'jquery'
     = javascript_include_tag 'application'
     = javascript_include_tag 'highlight'
-    = # TODO Remove this?
-    = open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation]
+    = yield :head
     
   %body
     #notice
@@ -18,7 +17,7 @@
     - if User.current?
       #admin_navigation= render :partial => "shared/admin_menu"
     #master
-      #wrapper
+      #wrapper.admin
         #content.admin=yield
         .push
     #footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
