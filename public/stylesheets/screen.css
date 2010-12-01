@@ -106,7 +106,7 @@ html, body {
   overflow: hidden; }
   #wrapper #main #side {
     float: left;
-    margin-top: 25px;
+    margin-top: 10px;
     width: 250px;
     color: #777777;
     font-size: 11pt; }
@@ -119,7 +119,7 @@ html, body {
   #wrapper #main #content {
     width: 500px;
     overflow: hidden;
-    margin: 20px 50px 0 0;
+    margin-right: 50px;
     float: left; }
     #wrapper #main #content strong {
       color: #afce41; }
@@ -269,8 +269,7 @@ ul.links {
         background: url(/images/github-icon.png) no-repeat -20px; }
 
 .post h2.post_header {
-  margin: 0;
-  padding: 0; }
+  margin-top: 10px !important; }
   .post h2.post_header a {
     text-decoration: none;
     color: #00adec; }
@@ -297,7 +296,16 @@ ul.links {
 
 #wrapper.admin {
   width: 90% !important;
-  margin-top: 40px; }
+  margin-top: 40px;
+  overflow: hidden; }
+  #wrapper.admin .panel {
+    float: left;
+    width: 300px; }
+    #wrapper.admin .panel ul {
+      margin: 0;
+      padding: 0; }
+      #wrapper.admin .panel ul li {
+        list-style: none; }
 #wrapper #post-wrapper {
   width: 1100px; }
   #wrapper #post-wrapper .post {

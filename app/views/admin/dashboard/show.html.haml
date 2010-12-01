@@ -3,8 +3,8 @@
   = javascript_include_tag 'common'
   = javascript_include_tag 'admin/dashboard'
   
-#summary
-  %h1= link_to enki_config[:title], root_url
+#summary.panel
+  %h2= Setting.blog_title
   %p.stats
     = "#{pluralize @stats.post_count, 'post'}, #{pluralize @stats.comment_count, 'comment'} #{pluralize @stats.tag_count, 'tag'}"
     
@@ -22,7 +22,7 @@
     - @comment_activity.each_with_index do |activity, i|
       %li{:class => "#{i == 0 ? 'first ' : ''}item"}
         %h3= link_to truncate(activity.post.title, :length => 50), post_path(activity.post)
-        %span.date= l activity.most_recent_comment.created_at
+        %span.date= l activity.most_recent_comment.created_at, :format => :short
         %span.count= activity.post.approved_comments.size
         %ul
           - activity.comments.each_with_index do |comment, index|
