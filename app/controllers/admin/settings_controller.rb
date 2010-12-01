@@ -1,11 +1,15 @@
 class Admin::SettingsController < Admin::BaseController
+  def index
+    render :action => :show
+  end
+  
   def show
     @setting = Setting.find_or_create
   end
   
   def create
     @setting = Setting.new(params[:setting])
-    if @setting.save
+    if @setting.save!
       redirect_to admin_root_path, :notice => t('.admin.settings.create.successful')
     else
       render :show
