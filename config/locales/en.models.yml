@@ -17,4 +17,11 @@ en:
       comment:
         title: Blog title
         description: Description
-        
+      post:
+        published_at: Published at
+        title: Title
+        created_by: Created by
+        excerpt: Excerpt
+        comments: Comments
+        actions: Actions
+        no_posts: There are no posts at this time.

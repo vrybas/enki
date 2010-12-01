@@ -1,0 +1,23 @@
+= content_for(:head) do
+  = javascript_include_tag('admin/posts.js')
+
+%h1= t('.title')
+
+%table
+  %tr
+    %th= Post.human_attribute_name :published_at
+    %th= Post.human_attribute_name :title
+    %th= Post.human_attribute_name :created_by
+    %th= Post.human_attribute_name :excerpt
+    %th= Post.human_attribute_name :comments
+    %th= Post.human_attribute_name :actions
+  - if @posts.empty?
+    %tr
+      %td{:colspan => 6}= t('.no_posts')
+  - else
+    = render @posts
+  
+  %tfoot
+    - if @posts.total_pages > 1
+      %tr.pagination
+        %td{:colspan => 6}= will_paginate @posts

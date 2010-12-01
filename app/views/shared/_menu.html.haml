@@ -1,7 +1,7 @@
 %menu
   - page_links_for_navigation.each do |link|
     %li= link_to link.name, link.url
-- unless category_links_for_navigation.empty?
-  %menu
-    - category_links_for_navigation.each do |link|
-      %li= link_to link.name, link.url
+/ - unless category_links_for_navigation.empty?
+/   %menu
+/     - category_links_for_navigation.each do |link|
+/       %li= link_to link.name, link.url

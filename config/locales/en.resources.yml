@@ -27,6 +27,9 @@ en:
         published_at_hint: "Example: now, yesterday, 1 hour from now"
         slug_hint: Leave blank for an auto-generated slug based on the title.
         minor_edit_hint: Minor edits will not show up as refreshed in feed readers. Use this to fix spelling mistakes and the like.
+      index:
+        title: Your posts
+        
     dashboard:
       show:
         latest_posts: Latest Posts
