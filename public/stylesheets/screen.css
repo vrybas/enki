@@ -297,36 +297,40 @@ ul.links {
   width: 90% !important;
   margin-top: 40px; }
 #wrapper #post-wrapper {
-  overflow: hidden; }
+  width: 1100px; }
   #wrapper #post-wrapper .post-preview {
     float: left;
-    width: 420px; }
-    #wrapper #post-wrapper .post-preview h2 {
-      color: red; }
-    #wrapper #post-wrapper .post-preview h2 {
+    width: 500px;
+    margin-right: 20px; }
+    #wrapper #post-wrapper .post-preview #wmd-preview h2 {
+      color: red;
       margin: 0;
       pandding: 0; }
   #wrapper #post-wrapper #post-form {
     width: 560px;
     float: right;
     margin-right: 20px; }
-  #wrapper #post-wrapper form input[type="text"] {
-    width: 100%;
-    border: 1px #999999 solid;
-    color: #666666;
-    font-size: 1.3em;
-    line-height: 15px; }
-  #wrapper #post-wrapper form input[type="submit"] {
-    font-size: 18px;
-    border: 0;
-    background-color: #333333;
-    color: white;
-    text-shadow: 0 1px 0 #222222;
-    font-weight: bold;
-    cursor: pointer;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    margin: 0 0 15px 0; }
+  #wrapper #post-wrapper form {
+    display: block; }
+    #wrapper #post-wrapper form input[type="text"], #wrapper #post-wrapper form textarea {
+      width: 100%; }
+    #wrapper #post-wrapper form input[type="text"] {
+      width: 100%;
+      border: 1px #999999 solid;
+      color: #666666;
+      font-size: 1.3em;
+      line-height: 15px; }
+    #wrapper #post-wrapper form input[type="submit"] {
+      font-size: 18px;
+      border: 0;
+      background-color: #333333;
+      color: white;
+      text-shadow: 0 1px 0 #222222;
+      font-weight: bold;
+      cursor: pointer;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      margin: 0 0 15px 0; }
 
 .push {
   height: 80px; }

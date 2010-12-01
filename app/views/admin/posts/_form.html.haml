@@ -6,14 +6,13 @@
   = javascript_include_tag 'elastic'
 
 #post-wrapper
-  %h2.title= @post.title
   .post-preview
-    
+    %h2.title= @post.title
     #wmd-preview
 
   = simple_form_for [:admin, @post], :html => {:id => "post-form"} do |f|
-    = f.text_field :title
-    #title-container= @post.title
+    = f.text_field :title, :placeholder => "World domination!"
+    #title-container= @post.title || raw("&nbsp;")
     
     #wmd-container
       #wmd-button-bar
