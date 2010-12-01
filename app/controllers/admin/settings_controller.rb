@@ -1,8 +1,4 @@
 class Admin::SettingsController < Admin::BaseController
-  def index
-    render :action => :show
-  end
-  
   def show
     @setting = Setting.find_or_create
   end
@@ -17,7 +13,7 @@ class Admin::SettingsController < Admin::BaseController
   end
   
   def update
-    @setting = Setting.find(params[:id])
+    @setting = Setting.find_or_create
     if @setting.update_attributes(params[:setting])
       redirect_to admin_root_path, :notice => t('.admin.settings.update.successful')
     else
