@@ -6,10 +6,15 @@
 
 .post= render @post
 
+.share
+  / .subscribe= raw t('.subscribe_to_blog', :link => link_to(t(".subscribe"), '#'))
+  = link_to "Tweet", "http://twitter.com/share", :class => "twitter-share-button", "data-count" => "horizontal", "data-via" => "agile_pandas"
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
 %ol.commentlist
   - @post.approved_comments.each do |comment|
     %li{:id => "comment-#{comment.id}"}= render comment
-.related= raw t('.more_related', :related_link => link_to(t('.archives'), archives_path))
+/ .related= raw t('.more_related', :related_link => link_to(t('.archives'), archives_path))
 
 %h2= t('.post_comment')
 - unless @comment.errors.empty?
@@ -18,10 +23,8 @@
     %ul
       - @comment.errors.sort_by(&:first).each do |error|
         %li= format_comment_error(error)
-= form_for [@post, @comment] do |f|
-  %div
-    %p
-      = f.text_field :author
-      = f.label :comment_author 
-    %p= f.text_area :body
-    %p= f.submit t('.save')
+
+= simple_form_for [@post, @comment] do |f|
+  = f.input :author, :required => false, :placeholder => t('.place_holder_author')
+  = f.input :body, :required => false, :placeholder => t('.place_holder_body')
+  = f.submit t('.save')

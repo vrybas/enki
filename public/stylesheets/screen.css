@@ -166,6 +166,23 @@ h2, header {
 .entrybody {
   margin-top: 1em; }
 
+.share {
+  margin: -40px 0 20px 0;
+  padding: 10px 15px 30px 15px;
+  background: #ffe8d9;
+  border-top: 1px solid #f78800; }
+  .share .subscribe {
+    margin-bottom: 7px; }
+    .share .subscribe a {
+      color: #f78800;
+      font-weight: bold; }
+
+ol.commentlist {
+  margin: 0;
+  padding: 0; }
+  ol.commentlist li {
+    border-bottom: 1px solid #cccccc; }
+
 #wrapper.admin {
   width: 90% !important;
   overflow: hidden; }

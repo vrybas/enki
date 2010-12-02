@@ -60,4 +60,7 @@ en:
       post_comment: Post a comment
       comment_not_added: Comment not added!
       save: Add Comment
-      
+      place_holder_author: Your name
+      place_holder_body: Comment!
+      subscribe_to_blog: "%{link} to this blog and get our updates"
+      subscribe: "Subscribe"
