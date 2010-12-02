@@ -1,8 +1,9 @@
 html {
-  font-family: Arial, Helvetica, Verdana, sans-serif;
-  line-height: 1.7;
-  color: #343434;
-  background-color: white; }
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  line-height: 23px;
+  color: #333333;
+  background-color: white;
+  font-size: 13px; }
 
 body {
   -webkit-font-smoothing: antialiased; }
@@ -20,10 +21,15 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: white;
-  font-family: Arial, Helvetica, Verdana, sans-serif; }
+  background-color: white; }
   html a, body a {
     color: black; }
+
+h2, header {
+  color: #333333;
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: bold; }
 
 #master {
   min-height: 100%;
@@ -48,7 +54,7 @@ html, body {
 
 #wrapper {
   margin: 10px auto;
-  width: 800px; }
+  width: 900px; }
 
 #flash_notice {
   padding: 10px;
@@ -59,7 +65,7 @@ html, body {
   background: #afce41; }
   #navigation menu {
     margin: 0 auto;
-    width: 800px;
+    width: 900px;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -106,18 +112,12 @@ html, body {
   overflow: hidden; }
   #wrapper #main #side {
     float: left;
-    margin-top: 10px;
     width: 250px;
-    color: #777777;
-    font-size: 11pt; }
-    #wrapper #main #side a {
-      text-decoration: none;
-      display: block;
-      font-size: 18pt;
-      font-weight: bold;
-      color: #333333; }
+    color: #777777; }
+    #wrapper #main #side #blog_title {
+      color: #00adec; }
   #wrapper #main #content {
-    width: 500px;
+    width: 600px;
     overflow: hidden;
     margin-right: 50px;
     float: left; }
@@ -129,8 +129,6 @@ html, body {
       text-align: center;
       text-shadow: 1px 1px 1px #cccccc;
       margin: 10px; }
-      #wrapper #main #content h3.the-way {
-        margin-top: 24px; }
     #wrapper #main #content .box {
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
@@ -139,117 +137,22 @@ html, body {
       padding: 10px;
       overflow: hidden;
       margin: 0 0 40px 0; }
-    #wrapper #main #content .small {
-      width: 30%;
-      float: left; }
-    #wrapper #main #content .medium {
-      width: 45%;
-      float: left; }
-      #wrapper #main #content .medium:last-child {
-        float: right; }
-    #wrapper #main #content .project {
-      margin-right: 54px;
-      position: relative;
-      width: 280px;
-      padding: 0; }
-      #wrapper #main #content .project:last-child {
-        margin: 0; }
-      #wrapper #main #content .project .wrap {
-        overflow: hidden;
-        padding: 10px;
-        border-bottom: 1px dotted #555555; }
-        #wrapper #main #content .project .wrap:last-child {
-          border: none; }
-        #wrapper #main #content .project .wrap .header {
-          float: left; }
-      #wrapper #main #content .project img {
-        -webkit-border-right-top-radius: 10px;
-        -moz-border-radius-topright: 10px;
-        border-top-right-radius: 10px;
-        -webkit-border-left-top-radius: 10px;
-        -moz-border-radius-topleft: 10px;
-        border-top-left-radius: 10px; }
-      #wrapper #main #content .project img.overlay {
-        top: 0;
-        left: 0;
-        position: absolute;
-        display: none; }
-      #wrapper #main #content .project ul.links {
-        margin: 0;
-        padding: 0;
-        float: right; }
-    #wrapper #main #content ul.info-containers {
-      margin: 0;
-      padding: 20px;
-      list-style: none;
-      float: left;
-      width: 100%;
-      margin-right: 10px;
-      color: #555555; }
-      #wrapper #main #content ul.info-containers li {
-        font-size: 16px;
-        font-weight: normal;
-        width: 210px;
-        margin-left: 10px;
-        float: left;
-        line-height: 1.7;
-        text-shadow: 1px 1px 0 white; }
-        #wrapper #main #content ul.info-containers li img {
-          float: left;
-          margin: 0 5px 3px 0; }
-    #wrapper #main #content .name {
-      font-weight: bold;
-      text-shadow: 1px 1px 0 white; }
 
-.container {
-  display: block;
-  overflow: hidden; }
-
-ul.links {
-  margin: 20px 0 0 0;
-  padding: 0 !important;
-  list-style: none; }
-  ul.links li {
-    width: 20px !important;
-    height: 20px !important;
-    float: left !important;
-    background: url(/images/buttons/small/base.png) no-repeat 0px;
-    margin-right: 5px;
-    padding: 0 !important; }
-    ul.links li:last-child {
-      margin: 0; }
-    ul.links li:hover {
-      background: url(/images/buttons/small/base.png) no-repeat -20px; }
-    ul.links li a {
-      display: block;
-      width: 20px !important;
-      height: 20px !important;
-      text-indent: -9999em;
-      font-docoration: none; }
-    ul.links li a.link {
-      background: url(/images/buttons/small/link.png) no-repeat center; }
-    ul.links li a.twitter {
-      background: url(/images/twitter-icon.png) no-repeat 0px; }
-      ul.links li a.twitter:hover {
-        background: url(/images/twitter-icon.png) no-repeat -20px; }
-    ul.links li a.github {
-      background: url(/images/github-icon.png) no-repeat 0px; }
-      ul.links li a.github:hover {
-        background: url(/images/github-icon.png) no-repeat -20px; }
-
-.post h2.post_header {
-  margin-top: 10px !important; }
-  .post h2.post_header a {
-    text-decoration: none;
-    color: #00adec; }
-    .post h2.post_header a:hover {
-      text-decoration: underline; }
-  .post h2.post_header span.date {
-    font-size: 12pt;
-    color: #cccccc; }
-  .post h2.post_header span.author {
-    color: #afce41;
-    font-size: 12pt; }
+.post {
+  margin-bottom: 50px; }
+  .post h2.post_header {
+    margin-top: 10px !important; }
+    .post h2.post_header a {
+      text-decoration: none;
+      color: #00adec; }
+      .post h2.post_header a:hover {
+        text-decoration: underline; }
+    .post h2.post_header span.date {
+      font-size: 12pt;
+      color: #cccccc; }
+    .post h2.post_header span.author {
+      color: #afce41;
+      font-size: 12pt; }
 
 .meta ul {
   margin: 0;
@@ -280,10 +183,6 @@ ul.links {
     float: left;
     width: 480px;
     margin-right: 20px; }
-    #wrapper #post-wrapper .post #wmd-preview h2 {
-      color: red;
-      margin: 0;
-      pandding: 0; }
   #wrapper #post-wrapper form#post-form {
     width: 560px;
     float: right;
@@ -322,6 +221,9 @@ form {
     cursor: pointer;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px; }
+  form span.hint {
+    font-style: italic;
+    font-siz: 10px; }
 
 table {
   border-collapse: border-collapse; }
@@ -347,7 +249,7 @@ pre code {
   font-size: 12px;
   line-height: 16px;
   padding: 1em 1.5em;
-  margin: 1em 0 1em 2em;
+  margin: 1em 2em 1em 2em;
   display: block;
   background: #203042;
   color: #f8f8f8;

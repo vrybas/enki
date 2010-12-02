@@ -18,7 +18,7 @@
         #main
           #content=yield
           #side
-            %h2= link_to Setting.blog_title, root_url, :id => "blog_title"
+            %header#blog_title= Setting.blog_title
             = Setting.description
         .push
     #footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
