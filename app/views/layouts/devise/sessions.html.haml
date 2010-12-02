@@ -1,0 +1,16 @@
+!!!
+%html{:dir => 'ltr', :lang => "en-NL"}
+  %head
+    %meta{'http-equiv' => "Content-Type", :content => "text/html;charset=utf-8"}
+    %title=yield(:page_title) || Settings.blog_title
+    = stylesheet_link_tag :all
+    = javascript_include_tag 'jquery'
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'highlight'
+    = javascript_include_tag 'showdown'
+    
+  %body
+    #master.session
+      #wrapper
+        #main
+          #content=yield
