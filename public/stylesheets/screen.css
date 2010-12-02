@@ -153,6 +153,8 @@ h2, header {
     .post h2.post_header span.author {
       color: #afce41;
       font-size: 12pt; }
+  .post p {
+    padding: 5px 0; }
 
 .meta ul {
   margin: 0;
