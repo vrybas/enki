@@ -1,0 +1,11 @@
+#save_handle
+  = link_to "Save", "", :class => "save"
+  = link_to "Cancel", :back, :class => "cancel"
+
+#cancel_window
+  .inner
+    %h2 Are you sure?
+    Canceling will dismiss all changes made. Are you sure you wish to continue?
+    .buttons
+      = link_to "Yeah", "", :class => "cancel_yes"
+      = link_to "Oh no!", "", :class => "cancel_no"

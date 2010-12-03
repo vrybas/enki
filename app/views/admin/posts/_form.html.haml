@@ -5,6 +5,49 @@
   = javascript_include_tag 'textarearesizer'
   = javascript_include_tag 'elastic'
 
+:javascript
+  jQuery.fn.exists = function(){return jQuery(this).length>0;}
+  jQuery.fn.watch = function() {
+    var o = $(this[0])
+    $("body").append('#{escape_javascript render(:partial => "shared/form_watch_pre")}')
+    
+    if($("#save_handle").exists())
+      $("input[name='commit']", o).remove();
+    
+    $(":input", o).click(function() {
+      if($("#save_handle").exists()) {
+        $("#save_handle a.save").click(function() {
+          o.submit();
+          return false;
+        });
+        
+        $("#save_handle a.cancel").click(function() {
+          $('#cancel_window').fadeIn();
+          $("#save_handle").fadeOut();
+          return false
+        });
+        
+        $("#save_handle").fadeIn();
+      }
+    });
+    
+    $("#cancel_window .inner .buttons a.cancel_no").click(function() {
+      $("#cancel_window").fadeOut();
+      $("#save_handle").fadeIn();
+      return false;
+    });
+    
+    $("#cancel_window .inner .buttons a.cancel_yes").click(function() {
+      $("#cancel_window").fadeOut();
+      return true;
+    })
+  }
+  
+  $(function() {
+    $("#post-form").watch()
+  })
+  
+
 #post-wrapper
   .post
     %h2.post_header

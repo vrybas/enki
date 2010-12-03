@@ -179,6 +179,73 @@ h2, header {
       color: #f78800;
       font-weight: bold; }
 
+#save_handle {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 40%;
+  right: 50%;
+  width: 150px;
+  background: #333333;
+  -webkit-border-right-top-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-left-top-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  text-align: center; }
+  #save_handle a {
+    color: white;
+    padding-left: 20px;
+    font-weight: bold; }
+  #save_handle a.save {
+    float: left;
+    background: url(/images/save.png) no-repeat left; }
+  #save_handle a.cancel {
+    float: right;
+    background: url(/images/cancel.png) no-repeat left; }
+
+#cancel_window {
+  display: none;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  right: 50%;
+  bottom: 50%;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 170px;
+  padding: 15px; }
+  #cancel_window .inner {
+    background: #444444;
+    padding: 10px 15px;
+    height: 150px; }
+    #cancel_window .inner .buttons {
+      line-height: 50px;
+      text-align: right;
+      position: absolute;
+      bottom: 10px;
+      right: 20px; }
+      #cancel_window .inner .buttons a {
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background: #333333;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        margin: 0 5px;
+        text-decoration: none; }
+    #cancel_window .inner h2 {
+      margin: 0;
+      color: white; }
+
 .session {
   background: #203042; }
   .session #wrapper {
