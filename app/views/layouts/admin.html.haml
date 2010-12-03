@@ -10,14 +10,14 @@
     = yield :head
     
   %body
-    #notice
-    -flash.each do |name, msg|
-      %div(id="flash_#{name}")=msg
-      
-    - if User.current?
-      #admin_navigation= render :partial => "shared/admin_menu"
     #master
+      #notice
+      -flash.each do |name, msg|
+        %div(id="flash_#{name}")=msg
+
+      - if User.current?
+        #admin_navigation= render :partial => "shared/admin_menu"
       #wrapper.admin
         #content.admin=yield
       .push
-    #footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
+    = render :partial => "shared/footer"

@@ -108,28 +108,28 @@ h2, header {
         font-size: 11pt;
         text-decoration: none; }
 
-#wrapper #main {
+#wrapper {
   overflow: hidden; }
-  #wrapper #main #side {
+  #wrapper #side {
     float: left;
     width: 250px;
     color: #777777; }
-    #wrapper #main #side #blog_title {
+    #wrapper #side #blog_title {
       color: #00adec; }
-  #wrapper #main #content {
+  #wrapper #content {
     width: 600px;
     overflow: hidden;
     margin-right: 50px;
     float: left; }
-    #wrapper #main #content strong {
+    #wrapper #content strong {
       color: #afce41; }
-    #wrapper #main #content h3 {
+    #wrapper #content h3 {
       font-size: 18pt;
       font-weight: normal;
       text-align: center;
       text-shadow: 1px 1px 1px #cccccc;
       margin: 10px; }
-    #wrapper #main #content .box {
+    #wrapper #content .box {
       -moz-border-radius: 10px;
       -webkit-border-radius: 10px;
       border-radius: 10px;
@@ -222,8 +222,10 @@ ol.commentlist {
     border-bottom: 1px solid #cccccc; }
 
 #wrapper.admin {
-  width: 90% !important;
+  width: 1100px !important;
   overflow: hidden; }
+  #wrapper.admin #content {
+    width: 100%; }
   #wrapper.admin .panel {
     float: left;
     width: 300px; }
@@ -289,9 +291,10 @@ table {
   height: 80px; }
 
 #footer {
-  height: 20px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
   background: #2d2d2d;
-  padding: 30px;
   font-size: 12px;
   color: white;
   font-weight: bold; }

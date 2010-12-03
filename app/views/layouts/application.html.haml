@@ -15,10 +15,9 @@
         #admin_navigation= render :partial => "shared/admin_menu"
       #navigation= render :partial => "shared/menu"
       #wrapper
-        #main
-          #content=yield
-          #side
-            %header#blog_title= Setting.blog_title
-            = Setting.description
-        .push
-    #footer= raw "Extended #{link_to "Enki"} by the #{link_to "Agile Pandas", "http://agile-pandas.com"}"
+        #content=yield
+        #side
+          %header#blog_title= Setting.blog_title
+          = Setting.description
+      .push
+    = render :partial => "shared/footer"
