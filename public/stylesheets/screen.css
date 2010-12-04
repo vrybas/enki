@@ -126,7 +126,6 @@ h2, header {
     #wrapper #content h3 {
       font-size: 18pt;
       font-weight: normal;
-      text-align: center;
       text-shadow: 1px 1px 1px #cccccc;
       margin: 10px; }
     #wrapper #content .box {
@@ -155,7 +154,8 @@ h2, header {
     height: 330px; }
     #new_blog .inner h2 {
       color: #00adec;
-      text-shadow: none; }
+      text-shadow: none;
+      text-align: center; }
     #new_blog .inner .description {
       border-bottom: 1px solid #888888; }
     #new_blog .inner form {
@@ -164,11 +164,17 @@ h2, header {
       background: none;
       border: none; }
       #new_blog .inner form textarea {
-        height: 100px; }
+        height: 100px;
+        vertical-align: top; }
       #new_blog .inner form input, #new_blog .inner form textarea {
-        margin: 0; }
+        margin: 0;
+        margin: 5px; }
       #new_blog .inner form label {
-        color: white; }
+        color: white;
+        display: inline-block;
+        width: 100px; }
+      #new_blog .inner form label.fork_me {
+        width: 300px; }
 
 a#fork_me {
   background: #00adec;
@@ -344,36 +350,6 @@ ol.commentlist {
   padding: 0; }
   ol.commentlist li {
     border-bottom: 1px solid #cccccc; }
-
-#wrapper.admin {
-  width: 1100px !important;
-  overflow: hidden; }
-  #wrapper.admin #content {
-    width: 100%; }
-  #wrapper.admin .panel {
-    float: left;
-    width: 300px; }
-    #wrapper.admin .panel ul {
-      margin: 0;
-      padding: 0; }
-      #wrapper.admin .panel ul li {
-        list-style: none; }
-#wrapper #post-wrapper {
-  width: 1100px; }
-  #wrapper #post-wrapper .post {
-    float: left;
-    width: 480px;
-    margin-right: 20px; }
-  #wrapper #post-wrapper form#post-form {
-    width: 560px;
-    float: right;
-    margin-right: 20px;
-    background: none;
-    border: none; }
-    #wrapper #post-wrapper form#post-form input, #wrapper #post-wrapper form#post-form textarea {
-      margin: 0; }
-    #wrapper #post-wrapper form#post-form input[type="text"], #wrapper #post-wrapper form#post-form textarea {
-      width: 100%; }
 
 form {
   padding: 10px;

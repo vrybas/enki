@@ -37,6 +37,16 @@ en:
       show:
         latest_posts: Latest Posts
         latest_comments: Latest Comments
+        whats_going_on: What's going on
+        content: Content
+        discussion: Discussion
+        posts: "%{posts_count} Posts"
+        comments: "%{comments_count} Comments"
+        tags: "%{tags_count} Tags"
+        quick_post: QuickPost
+        quick_save: Post now
+        drafts: Drafts
+        comment_title: "From %{from} on %{post_title}"
     health:
       title: Health
       throw_exception: Throw exception

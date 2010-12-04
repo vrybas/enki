@@ -2,36 +2,45 @@
   = javascript_include_tag 'jquery.jfeed.js'
   = javascript_include_tag 'common'
   = javascript_include_tag 'admin/dashboard'
-  
-#summary.panel
-  %h2= Blog.title
-  %p.stats
-    = "#{pluralize @stats.post_count, 'post'}, #{pluralize @stats.comment_count, 'comment'} #{pluralize @stats.tag_count, 'tag'}"
-    
-#recent-posts.panel
-  %h2= t('.latest_posts')
-  %ul
-    - @posts.each_with_index do |post, i|
-      %li{:class => "#{i == 0 ? 'first ' : ''}item"}
-        %h3= link_to truncate(post.title, :length => 50), admin_post_path(post)
-        %span.date= l post.published_at, :format => :short
-        %span.count= link_to post.approved_comments.size, post_path(post)
-#recent-comments.panel
-  %h2= t('.latest_comments')
-  %ul
-    - @comment_activity.each_with_index do |activity, i|
-      %li{:class => "#{i == 0 ? 'first ' : ''}item"}
-        %h3= link_to truncate(activity.post.title, :length => 50), post_path(activity.post)
-        %span.date= l activity.most_recent_comment.created_at, :format => :short
-        %span.count= activity.post.approved_comments.size
-        %ul
-          - activity.comments.each_with_index do |comment, index|
-            %li{:class => activity.comments.size == index + 1 ? 'last' : nil}
-              = link_to comment.author, admin_comment_path(comment), :id => "comment-link-#{comment.id}", :class => "comment-link"
-          
-        - activity.comments.each do |comment|
-          %div{:id => "comment-body#{comment.id}", :class => "comment-body"}
-            .comment-actions
-              = link_to image_tag('silk/pencil.png', :alt => "Edit"), admin_comment_path(comment)
-              = link_to t('.delete'), admin_comment_path(comment), :method => :delete
-            = comment.body_html
+
+.row
+  #summary.panel
+    %h4= t('.whats_going_on')
+    .panel_row.content
+      %h5= t('.content')
+      %ul
+        %li= link_to t('.posts', :posts_count => @stats.post_count), admin_posts_path
+        %li= link_to t('.tags', :tags_count => @stats.tag_count), admin_tags_path
+    .panel_row.discussion
+      %h5= t('.discussion')
+      %ul
+        %li= link_to t('.comments', :comments_count => @stats.comment_count), admin_comments_path
+
+  #recent-comments.panel
+    %h4= t('.latest_comments')
+    %ul
+      - @comment_activity.each do |activity|
+        - activity.comments.each do |comment|          
+          %li
+            .panel_title= raw t('.comment_title', :from => link_to(comment.author), :post_title => link_to(comment.post.title, post_path(comment.post)))
+            = raw truncate(comment.post.body, :length => 50)
+
+.row
+  #quick_post.panel
+    %h4= t('.quick_post')
+    = simple_form_for [:admin, Post.new] do |f|
+      = f.input :title, :required => false
+      = f.input :markdown, :required => false, :label => Post.human_attribute_name(:content)
+      = f.input :tag_list, :as => :string
+      = f.submit t('.quick_save')
+  #drafts.panel
+    %h4= t('.drafts')
+
+  #recent-posts.panel
+    %h4= t('.latest_posts')
+    %ul
+      - @posts.each_with_index do |post, i|
+        %li
+          .panel_title= link_to truncate(post.title, :length => 50), admin_post_path(post)
+          %span.date= l post.published_at, :format => :short
+          %span.count= link_to post.approved_comments.size, post_path(post)

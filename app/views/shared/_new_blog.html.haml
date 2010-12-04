@@ -2,4 +2,4 @@
   .inner
     %h2= t('.new_blog_title')
     .description= t('.new_blog_description')
-    = render :partial => "admin/blogs/form"
+    = render :partial => "admin/blogs/form", :locals => {:remote => false}

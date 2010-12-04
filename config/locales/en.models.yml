@@ -25,3 +25,7 @@ en:
         comments: Comments
         actions: Actions
         no_posts: There are no posts at this time.
+      blog:
+        title: Blog Title
+        description: Description
+        show_fork: Show the "Fork me on Github" label
