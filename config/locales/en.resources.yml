@@ -21,6 +21,7 @@ en:
     posts:
       post:
         delete: Delete
+        no_tags: No Tags
       show:
         title: "Editing post - %{link_to_show} by %{author}"
       form:
@@ -32,6 +33,7 @@ en:
         minor_edit_hint: Minor edits will not show up as refreshed in feed readers. Use this to fix spelling mistakes and the like.
       index:
         title: Your posts
+        
         
     dashboard:
       show:

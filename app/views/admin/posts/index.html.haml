@@ -3,14 +3,15 @@
 
 %h1= t('.title')
 
-%table
+%table{:cellpadding => 0}
   %tr
-    %th= Post.human_attribute_name :published_at
-    %th= Post.human_attribute_name :title
+    %th.title= Post.human_attribute_name :title
     %th= Post.human_attribute_name :created_by
     %th= Post.human_attribute_name :excerpt
-    %th= Post.human_attribute_name :comments
+    %th= image_tag "/images/comment.png"
+    %th.tags= Tag.model_name.human(:count => :other)
     %th= Post.human_attribute_name :actions
+    %th= Post.human_attribute_name :published_at
   - if @posts.empty?
     %tr
       %td{:colspan => 6}= t('.no_posts')

@@ -383,9 +383,39 @@ form {
     font-siz: 10px; }
 
 table {
-  border-collapse: border-collapse; }
+  margin: 20px 0;
+  border-collapse: collapse;
+  width: 100%;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #cccccc; }
   table td {
-    padding: 5px 10px; }
+    padding: 3px 10px;
+    height: 60px; }
+  table tr {
+    border-bottom: 1px solid #cccccc;
+    vertical-align: top; }
+  table tr:first-child {
+    background: #cccccc; }
+    table tr:first-child th {
+      color: white;
+      text-shadow: 1px 0px 1px #333333;
+      height: 30px;
+      text-align: left;
+      padding: 5px 10px; }
+    table tr:first-child th.title {
+      width: 250px; }
+    table tr:first-child th.tags {
+      width: 120px; }
+    table tr:first-child th:first-child {
+      -webkit-border-left-top-radius: 10px;
+      -moz-border-radius-topleft: 10px;
+      border-top-left-radius: 10px; }
+    table tr:first-child th:last-child {
+      -webkit-border-right-top-radius: 10px;
+      -moz-border-radius-topright: 10px;
+      border-top-right-radius: 10px; }
 
 .push {
   height: 80px; }

@@ -8,9 +8,9 @@
     #master #wrapper .panel {
       margin: 20px 10px;
       border: 1px solid #cccccc;
-      -moz-border-radius: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
       overflow: hidden;
       background: white; }
       #master #wrapper .panel a {
@@ -18,12 +18,12 @@
         color: #00adec; }
       #master #wrapper .panel h4 {
         background: #dddddd;
-        -webkit-border-right-top-radius: 10px;
-        -moz-border-radius-topright: 10px;
-        border-top-right-radius: 10px;
-        -webkit-border-left-top-radius: 10px;
-        -moz-border-radius-topleft: 10px;
-        border-top-left-radius: 10px;
+        -webkit-border-right-top-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        border-top-right-radius: 5px;
+        -webkit-border-left-top-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        border-top-left-radius: 5px;
         padding: 3px 5px;
         text-shadow: 1px 1px 1px white;
         margin-bottom: 5px; }
