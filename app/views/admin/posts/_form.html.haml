@@ -6,12 +6,16 @@
   = javascript_include_tag 'elastic'
 
 :javascript
+  // TODO Move this elsewhere
   jQuery.fn.exists = function(){return jQuery(this).length>0;}
   jQuery.fn.watch = function() {
-    var o = $(this[0])
+    // Form object
+    var o = $(this[0]);
+    // Append windows.
     $("body").append('#{escape_javascript render(:partial => "shared/form_watch_pre")}')
     
     if($("#save_handle").exists())
+      // Remove original save button if it exists
       $("input[name='commit']", o).remove();
     
     $(":input", o).click(function() {
