@@ -1,0 +1,6 @@
+%h1= t('.title')
+
+- if @blog.new_record?
+  #dialog= t('.no_blogs_set')
+  
+= render :partial => "form"

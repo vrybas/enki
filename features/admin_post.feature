@@ -11,4 +11,4 @@ Feature: Posting
 			| wmd-input			 	| Pandas mon, I tell ye, they are vigorous 	|
 		When I press "Save"
 		Then I should see "Awesome post"
-		Then I should see "by Agile Panda"
+		Then I should see "Agile Panda"

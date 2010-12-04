@@ -12,12 +12,12 @@ verification failures will by default result in a 400 Bad Request response.
 Usage:
 
   class GlobalController < ActionController::Base
-    # Prevent the #update_settings action from being invoked unless
+    # Prevent the #update_blogs action from being invoked unless
     # the 'admin_privileges' request parameter exists. The
-    # settings action will be redirected to in current controller
+    # blogs action will be redirected to in current controller
     # if verification fails.
     verify :params => "admin_privileges", :only => :update_post,
-           :redirect_to => { :action => "settings" }
+           :redirect_to => { :action => "blogs" }
 
     # Disallow a post from being updated if there was no information
     # submitted with the post, and if there is no active post in the

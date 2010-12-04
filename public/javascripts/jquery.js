@@ -138,7 +138,7 @@ jQuery.fn = jQuery.prototype = {
 	// the specified array of elements (destroying the stack in the process)
 	// You should use pushStack() in order to do this, but maintain the stack
 	setArray: function( elems ) {
-		// Resetting the length to 0, then using the native Array push
+		// Reblog the length to 0, then using the native Array push
 		// is a super-fast way to populate an object with array-like properties
 		this.length = 0;
 		Array.prototype.push.apply( this, elems );
@@ -176,7 +176,7 @@ jQuery.fn = jQuery.prototype = {
 				options[ name ] = value;
 			}
 
-		// Check to see if we're setting style values
+		// Check to see if we're blog style values
 		return this.each(function(i){
 			// Set all the styles
 			for ( name in options )
@@ -957,7 +957,7 @@ jQuery.extend({
 			return undefined;
 
 		var notxml = !jQuery.isXMLDoc( elem ),
-			// Whether we are setting (or getting)
+			// Whether we are blog (or getting)
 			set = value !== undefined;
 
 		// Try to normalize/fix the name
@@ -990,7 +990,7 @@ jQuery.extend({
 					return elem.getAttributeNode( name ).nodeValue;
 
 				// elem.tabIndex doesn't always return the correct value when it hasn't been explicitly set
-				// http://fluidproject.org/blog/2008/01/09/getting-setting-and-removing-tabindex-values-with-javascript/
+				// http://fluidproject.org/blog/2008/01/09/getting-blog-and-removing-tabindex-values-with-javascript/
 				if ( name == "tabIndex" ) {
 					var attributeNode = elem.getAttributeNode( "tabIndex" );
 					return attributeNode && attributeNode.specified
@@ -1027,7 +1027,7 @@ jQuery.extend({
 		if ( !jQuery.support.opacity && name == "opacity" ) {
 			if ( set ) {
 				// IE has trouble with opacity if it does not have layout
-				// Force it by setting the zoom level
+				// Force it by blog the zoom level
 				elem.zoom = 1;
 
 				// Set the alpha filter to set the opacity
@@ -3239,11 +3239,11 @@ jQuery.extend({
 		});
 	},
 
-	ajaxSetup: function( settings ) {
-		jQuery.extend( jQuery.ajaxSettings, settings );
+	ajaxSetup: function( blogs ) {
+		jQuery.extend( jQuery.ajaxBlogs, blogs );
 	},
 
-	ajaxSettings: {
+	ajaxBlogs: {
 		url: location.href,
 		global: true,
 		type: "GET",
@@ -3276,9 +3276,9 @@ jQuery.extend({
 	lastModified: {},
 
 	ajax: function( s ) {
-		// Extend the settings, but re-extend 's' so that it can be
+		// Extend the blogs, but re-extend 's' so that it can be
 		// checked again later (in the test suite, specifically)
-		s = jQuery.extend(true, s, jQuery.extend(true, {}, jQuery.ajaxSettings, s));
+		s = jQuery.extend(true, s, jQuery.extend(true, {}, jQuery.ajaxBlogs, s));
 
 		var jsonp, jsre = /=\?(&|$)/g, status, data,
 			type = s.type.toUpperCase();
@@ -3878,7 +3878,7 @@ jQuery.extend({
 
 jQuery.fx.prototype = {
 
-	// Simple function for setting a style value
+	// Simple function for blog a style value
 	update: function(){
 		if ( this.options.step )
 			this.options.step.call( this.elem, this.now, this );

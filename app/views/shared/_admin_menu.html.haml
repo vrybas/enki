@@ -10,6 +10,6 @@
   %li= link_to Tag.model_name.human(:count => :other), admin_tags_path, :accesskey => '5'
   %li= link_to t('.actions'), admin_undo_items_path, :accesskey => '6'
   %li= link_to t('.health'), admin_health_path, :accesskey => '7'
-  %li= link_to Setting.model_name.human, admin_settings_path, :accesskey => '8'
+  %li= link_to Blog.model_name.human, admin_blogs_path, :accesskey => '8'
   %li= link_to t('.logout'), destroy_user_session_path, :accesskey => 'l', :method => :delete
-  %li= link_to t('.back_to_blog'), '/', :accesskey => 'v', :title => t('.back_to_blog_title')
+  %li= link_to t('.back_to_blog'), '/', :accesskey => 'v', :title => t('.back_to_title')

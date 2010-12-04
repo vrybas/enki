@@ -2,7 +2,7 @@
 %html{:dir => 'ltr', :lang => "en-NL"}
   %head
     %meta{'http-equiv' => "Content-Type", :content => "text/html;charset=utf-8"}
-    %title=yield(:page_title) || Settings.blog_title
+    %title=yield(:page_title) || Blogs.title
     = stylesheet_link_tag :all
     = javascript_include_tag 'jquery'
     = javascript_include_tag 'application'
@@ -10,6 +10,14 @@
     = javascript_include_tag 'showdown'
     
   %body
+    - if Blog.show_fork
+      = link_to "http://github.com/agilepandas/enki", :id => "fork_me" do
+        FORK ME ON
+        .github Github
+    -# Not functional
+    -# Please note that the cucumber test will also fail.
+    -# render :partial => "shared/new_blog" if Blog.new_blog?
+          
     #master
       - if User.current?
         #admin_navigation= render :partial => "shared/admin_menu"
@@ -17,7 +25,7 @@
       #wrapper
         #content=yield
         #side
-          %header#blog_title= Setting.blog_title
-          = Setting.description
+          %header#title= Blog.title
+          = Blog.description
       .push
     = render :partial => "shared/footer"

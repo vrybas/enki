@@ -1,6 +1,6 @@
-class CreateSettings < ActiveRecord::Migration
+class CreateBlogs < ActiveRecord::Migration
   def self.up
-    create_table :settings do |t|
+    create_table :blogs do |t|
       t.string :title
       t.text :description
 
@@ -9,6 +9,6 @@ class CreateSettings < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :settings
+    drop_table :blogs
   end
 end

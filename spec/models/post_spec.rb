@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 
 describe Post, "integration" do
-  describe 'setting tag_list' do
+  describe 'blog tag_list' do
     it 'increments tag counter cache' do
       post1 = Post.create!(:title => 'My Post', :markdown => "body", :tag_list => "ruby")
       post2 = Post.create!(:title => 'My Post', :markdown => "body", :tag_list => "ruby")

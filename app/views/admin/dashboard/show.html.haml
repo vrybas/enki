@@ -4,7 +4,7 @@
   = javascript_include_tag 'admin/dashboard'
   
 #summary.panel
-  %h2= Setting.blog_title
+  %h2= Blog.title
   %p.stats
     = "#{pluralize @stats.post_count, 'post'}, #{pluralize @stats.comment_count, 'comment'} #{pluralize @stats.tag_count, 'tag'}"
     

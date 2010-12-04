@@ -1,0 +1,6 @@
+= simple_form_for @blog || Blog.new, :url => admin_blogs_path do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :show_fork, :as => :boolean
+  
+  = f.submit t('.save')

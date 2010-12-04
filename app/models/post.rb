@@ -127,6 +127,6 @@ class Post < ActiveRecord::Base
   end
   
   def set_author
-    self.user = User.current
+    self.user = User.current unless self.user.present?
   end
 end

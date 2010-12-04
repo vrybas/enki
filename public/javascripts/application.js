@@ -32,9 +32,4 @@ $(function() {
 	$("#post_title").live("keyup", function(event) {
     editPost();
 	});
-	
-	//Only need to load the title in the url preview for the edit draft page
-  // if($(".draft-title-container").length) {
-  //  editPost();
-  // }
 })

@@ -31,6 +31,13 @@
   @include rounded-top-right($radius)
   @include rounded-top-left($radius)
 
+@mixin rounded-right($radius=5px)
+  @include rounded-top-right($radius)
+  @include rounded-bottom-right($radius)
+
+@mixin rounded-left($radius=5px)
+  @include rounded-top-left($radius)
+  @include rounded-bottom-left($radius)
 
 @mixin rounded-with($side, $radius=5px)
   -moz-border-radius-#{$side}: $radius

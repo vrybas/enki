@@ -260,7 +260,7 @@ $.fn.ajaxSubmit = function(options) {
     // private function for handling file uploads (hat tip to YAHOO!)
     function fileUpload() {
         var form = $form[0];
-        var opts = $.extend({}, $.ajaxSettings, options);
+        var opts = $.extend({}, $.ajaxBlogs, options);
 
         var id = 'jqFormIO' + (new Date().getTime());
         var $io = $('<iframe id="' + id + '" name="' + id + '" />');

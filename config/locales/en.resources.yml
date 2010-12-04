@@ -6,7 +6,10 @@ en:
       health: Health
       logout: Logout
       back_to_blog: Back to blog
-      back_to_blog_title: View blog
+      back_to_title: View blog
+    new_blog:
+      new_blog_title: Blog Setup
+      new_blog_description: "Hey! This appears to be a newly installed blog. Before you continue using this blog we'd like you to setup some default settings."
   admin:
     comments:
       comment:
@@ -37,11 +40,12 @@ en:
     health:
       title: Health
       throw_exception: Throw exception
-    settings:
+    blogs:
       show: 
-        no_settings_set: "It appears you haven't got any settings set yet. Let's get that blog personalized!"
-        save: Save settings
+        no_blogs_set: "It appears you haven't got any blogs set yet. Let's get that blog personalized!"
         title: Blog Settings
+      form:
+        save: Save settings
       create:
         successful: Your settings have been saved
       update:

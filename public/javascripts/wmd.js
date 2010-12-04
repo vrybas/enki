@@ -588,7 +588,7 @@ Attacklab.wmdBase = function(){
 		
 			if (undoObj.canUndo()) {
 				if (lastState) {
-					// What about setting state -1 to null or checking for undefined?
+					// What about blog state -1 to null or checking for undefined?
 					lastState.restore();
 					lastState = null;
 				}

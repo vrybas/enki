@@ -18,6 +18,6 @@ module PageTitleHelper
   private
 
   def compose_title(*parts)
-    (parts << Setting.blog_title).reject(&:blank?).join(" - ")
+    (parts << Blog.title).reject(&:blank?).join(" - ")
   end
 end
