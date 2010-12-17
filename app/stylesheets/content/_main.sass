@@ -64,7 +64,38 @@
         width: 100px
       label.fork_me
         width: 300px
-      
+
+@font-face
+  font-family: Collegia
+  src: url(/fonts/Collegia.ttf)
+
+#fork-ribbon-holder
+  height: 11em
+  overflow: hidden
+  position: absolute
+  top: 0
+  right: 0  
+  .ribbon
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    -webkit-box-shadow: #888 0px 0px 17px
+    font-family: Collegia, sans-serif
+    background: #121621
+    color: #FFF
+    display: block
+    font-size: 11pt
+    letter-spacing: -0.1px
+    line-height: 1.35em
+    opacity: 0.95
+    padding: 0.25em 0px
+    position: relative
+    top: 3em
+    right: -2.5em
+    text-decoration: none
+    span
+      border: 1px solid #53565E
+      padding: 0.1em 3em
+    
 a#fork_me
   // background: #EC2163
   background: #00ADEC

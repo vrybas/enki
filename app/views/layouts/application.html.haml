@@ -11,9 +11,9 @@
     
   %body
     - if Blog.show_fork
-      = link_to "http://github.com/agilepandas/enki", :id => "fork_me" do
-        FORK ME ON
-        .github Github
+      #fork-ribbon-holder
+        = link_to "http://github.com/agilepandas/enki", :class => 'ribbon' do
+          %span Fork me on Github
     -# Not functional
     -# Please note that the cucumber test will also fail.
     =# render :partial => "shared/new_blog"

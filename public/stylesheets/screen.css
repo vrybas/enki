@@ -176,6 +176,37 @@ h2, header {
       #new_blog .inner form label.fork_me {
         width: 300px; }
 
+@font-face {
+  font-family: Collegia;
+  src: url(/fonts/Collegia.ttf); }
+
+#fork-ribbon-holder {
+  height: 11em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0; }
+  #fork-ribbon-holder .ribbon {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-box-shadow: #888888 0px 0px 17px;
+    font-family: Collegia, sans-serif;
+    background: #121621;
+    color: white;
+    display: block;
+    font-size: 11pt;
+    letter-spacing: -0.1px;
+    line-height: 1.35em;
+    opacity: 0.95;
+    padding: 0.25em 0px;
+    position: relative;
+    top: 3em;
+    right: -2.5em;
+    text-decoration: none; }
+    #fork-ribbon-holder .ribbon span {
+      border: 1px solid #53565e;
+      padding: 0.1em 3em; }
+
 a#fork_me {
   background: #00adec;
   position: fixed;
@@ -315,6 +346,7 @@ a#fork_me {
     margin: 0 auto;
     width: 500px; }
     .session #wrapper #login-wrap {
+      margin: 50px auto 0 auto;
       width: 400px;
       margin-top: 50px;
       -moz-border-radius: 5px;
@@ -439,27 +471,32 @@ pre code {
   padding: 1em 1.5em;
   margin: 1em 2em 1em 2em;
   display: block;
-  background: #203042;
-  color: #f8f8f8;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  color: black;
   white-space: pre-wrap; }
 pre .shebang, pre .comment, pre .template_comment, pre .javadoc {
-  color: #7c7c7c; }
+  color: #0082f7;
+  font-style: italic; }
 pre .keyword, pre .tag, pre .ruby .function .keyword, pre .tex .command {
-  color: #96cbfe; }
+  color: #1c39f6; }
 pre .function .keyword, pre .sub .keyword, pre .method, pre .list .title {
   color: #ffffb6; }
 pre .string, pre .attribute .value, pre .cdata, pre .filter .argument, pre .attr_selector, pre .apache .cbracket, pre .date {
-  color: #a8ff60; }
+  color: #00a650; }
 pre .subst {
   color: #daefa3; }
 pre .regexp {
   color: #e9c062; }
 pre .function .title, pre .sub .identifier, pre .pi, pre .decorator, pre .ini .title, pre .tex .special {
-  color: #ffffb6; }
-pre .class .title, pre .constant, pre .smalltalk .class, pre .javadoctag, pre .yardoctag, pre .phpdoc, pre .nginx .built_in {
-  color: #ffffb6; }
+  color: #ff9230; }
+pre .class .title, pre .smalltalk .class, pre .javadoctag, pre .yardoctag, pre .phpdoc, pre .nginx .built_in, pre .inheritance {
+  color: black;
+  text-decoration: underline; }
+pre .constant {
+  color: #7998d7; }
 pre .symbol, pre .ruby .symbol .string, pre .ruby .symbol .keyword, pre .ruby .symbol .keymethods, pre .number, pre .variable, pre .vbscript, pre .literal {
-  color: #c6c5fe; }
+  color: #7998d7; }
 pre .css .keyword {
   color: #96cbfe; }
 pre .css .rule .keyword, pre .css .id {
