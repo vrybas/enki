@@ -11,6 +11,7 @@
   = link_to "Tweet", "http://twitter.com/share", :class => "twitter-share-button", "data-count" => "horizontal", "data-via" => "agile_pandas"
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
+%h2= t('.comments')
 %ol.commentlist
   - @post.approved_comments.each do |comment|
     %li{:id => "comment-#{comment.id}"}= render comment

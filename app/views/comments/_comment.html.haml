@@ -1,0 +1,4 @@
+.info
+  %h3= author_link(comment)
+  = l comment.created_at, :format => :short
+.comment_body= raw comment.body_html

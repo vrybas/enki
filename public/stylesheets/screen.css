@@ -381,7 +381,28 @@ ol.commentlist {
   margin: 0;
   padding: 0; }
   ol.commentlist li {
-    border-bottom: 1px solid #cccccc; }
+    overflow: hidden;
+    padding: 10px; }
+    ol.commentlist li .info {
+      float: left;
+      width: 140px;
+      padding-left: 20px;
+      background: url(/images/comment_user.png) no-repeat top left;
+      font-size: 8pt; }
+      ol.commentlist li .info h3 {
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 11pt !important;
+        line-height: 10px; }
+    ol.commentlist li .comment_body {
+      margin-left: 20px;
+      float: left; }
+  ol.commentlist li:nth-child(2n+1) {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background: #eeeeee; }
 
 form {
   padding: 10px;

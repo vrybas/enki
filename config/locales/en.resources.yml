@@ -80,6 +80,7 @@ en:
       place_holder_body: Comment!
       subscribe_to_blog: "%{link} to this blog and get our updates"
       subscribe: "Subscribe"
+      comments: Comments
   devise:
     sessions:
       new:
