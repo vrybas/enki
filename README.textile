@@ -15,7 +15,7 @@ h3. Changes in my development branch 'vrybas'
       * Some main layout changes
       * Disqus comments integration
       * Non-automatic slug for posts
-      * <cut> tag processing for posts("read more >>"'s on 'index', full text on 'show')
+      * "<cut>" tag processing for posts("read more >>"'s on 'index', full text on 'show')
       * Old ActsAsTaggableOnSteroids plugin replaced with ActsAsTaggableOn gem
       * Ranged tags cloud with different sizes for popular tags
       * Disable live-time post preview(because of performance)
