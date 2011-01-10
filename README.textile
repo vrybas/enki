@@ -5,33 +5,33 @@ h2. Preview: "blog.rybas.org":http://blog.rybas.org and "blog.rybas.ru":http://b
 h2. How it differs from original Enki
 
 h3. Changes in 'master'. Mostly from the "Agile Pandas fork":https://github.com/agilepandas/enki
-    - Google Search removed
-    - Haml/Sass integrated (partially)
-    - Lots of main layout changes
-    - Devise instead of OpenID authorization
-    - Live-time post preview
+      - Google Search removed
+      - Haml/Sass integrated (partially)
+      - Lots of main layout changes
+      - Devise instead of OpenID authorization
+      - Live-time post preview
   
 h3. Changes in my development branch 'vrybas'
-    - Some main layout changes
-    - Disqus comments integration
-    - Non-automatic slug for posts
-    - <cut> tag processing for posts("read more >>"'s on 'index', full text on 'show')
-    - Old ActsAsTaggableOnSteroids plugin replaced with ActsAsTaggableOn gem
-    - Ranged tags cloud with different sizes for popular tags
-    - Disable live-time post preview(because of performance)
-    - Feedburner for Atom feeds
-    - Google Analytics integration
+      - Some main layout changes
+      - Disqus comments integration
+      - Non-automatic slug for posts
+      - <cut> tag processing for posts("read more >>"'s on 'index', full text on 'show')
+      - Old ActsAsTaggableOnSteroids plugin replaced with ActsAsTaggableOn gem
+      - Ranged tags cloud with different sizes for popular tags
+      - Disable live-time post preview(because of performance)
+      - Feedburner for Atom feeds
+      - Google Analytics integration
 
 h3. Changes in 'en' branch (English version of my blog)
-    - Identical to 'vrybas', just some config changes
+      - Identical to 'vrybas', just some config changes
 
 h3. Changes in 'ru' branch (Russian version), forked from 'en'
-    - Blog title and author configuration
-    - Internationalization yml's
-    - gem russian included
-    - Disqus for blog.rybas.ru
-    - Feedburner blog.rybas.ru
-    - Google Analytics for blog.rybas.ru
+      - Blog title and author configuration
+      - Internationalization yml's
+      - gem russian included
+      - Disqus for blog.rybas.ru
+      - Feedburner blog.rybas.ru
+      - Google Analytics for blog.rybas.ru
 
 
 h1. Original Enki readme
